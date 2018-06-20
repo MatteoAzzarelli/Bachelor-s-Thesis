@@ -1,2 +1,2 @@
-# Graduate-Thesis
-Graduate Thesis in Computer Science UNIPG
+# Bachelor-s-Thesis
+Bachelor's Thesis in Computer Science UNIPG
