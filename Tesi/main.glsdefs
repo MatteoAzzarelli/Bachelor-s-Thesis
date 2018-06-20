@@ -1,0 +1,30 @@
+\ifglsentryexists{mvc}{}%
+{%
+\gls@defglossaryentry{mvc}%
+{%
+name={MVC},%
+sort={MVC},%
+type={main},%
+first={MVC},%
+firstplural={MVCs},%
+text={MVC},%
+plural={MVCs},%
+description={Model View Controller},%
+descriptionplural={Model View Controller},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
