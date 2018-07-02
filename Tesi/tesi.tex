@@ -1,0 +1,124 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX program = pdflatex
+% !TEX spellcheck = it-IT
+\documentclass[11pt, a4paper, twoside, openright]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}	%caratteri accentati
+
+%frontespizio
+\usepackage[nowrite]{frontespizio}
+
+%------------------------------------------------
+%	PAGE SETTINGS
+%------------------------------------------------
+\usepackage{fancyhdr}
+
+\newcommand{\fncyfront}{% R: Right, L: Left, O: Odd, E: Even
+	\fancyhead[RO]{{\footnotesize\rightmark}}
+	\fancyfoot[RO]{\thepage}
+	\fancyhead[LE]{\footnotesize{\leftmark}}
+	\fancyfoot[LE]{\thepage}
+	\fancyhead[RE,LO]{}
+	\fancyfoot[C]{M. Azzarelli}
+	\renewcommand{\headrulewidth}{0.3pt}}
+\newcommand{\fncymain}{%
+	\fancyhead[RO]{{\footnotesize\rightmark}}
+	\fancyfoot[RO]{\thepage}
+	\fancyhead[LE]{{\footnotesize\leftmark}}
+	\fancyfoot[LE]{\thepage}
+	\fancyfoot[C]{M.Azzarelli}
+	\renewcommand{\headrulewidth}{0.3pt}}
+
+% Redefine the plain page style (include page like chapter etc)
+\fancypagestyle{plain}{
+	\fancyhf{}%
+	\fancyfoot[RO]{\thepage}
+	\fancyfoot[LE]{\thepage}
+	\fancyfoot[C]{M.Azzarelli}%
+	\renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+	\renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+
+%-------------------------------------------
+%		CHAPTER STYLE
+%-------------------------------------------
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+
+\usepackage[english,italian]{babel}
+
+
+%----------------------------------------------
+%		Define abstract environment
+%----------------------------------------------
+\newenvironment{abstract}%
+{\cleardoublepage%
+	\thispagestyle{empty}%
+	\null \vfill\begin{center}%
+		\bfseries \abstractname \end{center}}%
+{\vfill\null}
+
+
+
+\begin{document}
+
+	\fncyfront
+	\pagestyle{empty}
+	
+	\begin{frontespizio}
+		\Universita{Perugia}
+		\Facolta{SCIENZE MM.FF.NN.}
+		\Dipartimento{Matematica ed Informatica}
+		\Corso[Laurea]{Informatica}
+		\Logo[5cm]{images/Logo_unipg}
+		\Titoletto{Tesi di laurea}
+		\Titolo{IMPLEMENTAZIONE DI UN TOOL\\ PER IL SUPPORTO ALLA VALUTAZIONE AUTOMATICA\\ DI PROGETTI SU GITHUB }
+		\NCandidato{Laureando}
+		\Candidato[244999]{Matteo Azzarelli}
+		\Relatore{Prof.~Francesco Santini}
+		\Rientro{2.5cm}
+		\Annoaccademico{2017-2018}
+	\end{frontespizio}
+
+	%----------------------------------------------
+	%		Dedica
+	%----------------------------------------------
+
+	\cleardoublepage
+	\null\vspace{\stretch{1}}
+	\begin{flushright}
+		\textit{A Luisa e ai miei genitori}
+	\end{flushright}
+	\vspace{\stretch{2}}\null
+	%----------------------------------------------
+
+	%----------------------------------------------
+	%	Abstract
+	%----------------------------------------------
+	\begin{abstract}
+		Contenuto del sommario
+	\end{abstract}
+
+
+	\frontmatter	%impostta il layout per il menu'
+	%----------------------------------------------
+	%		Indici
+	%----------------------------------------------
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	\cleardoublepage
+	\pagestyle{fancy}
+	\fncymain	%impostta il layout per il main
+	
+	\mainmatter
+	\include{chapters/chapter01}	
+	\appendix
+	
+\end{document}
