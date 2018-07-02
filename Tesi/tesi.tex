@@ -1,6 +1,6 @@
-% !TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8
 % !TEX program = pdflatex
-% !TEX spellcheck = it-IT
+% !TeX spellcheck = it_IT
 \documentclass[11pt, a4paper, twoside, openright]{book}
 
 \usepackage[T1]{fontenc}
@@ -9,6 +9,22 @@
 
 %frontespizio
 \usepackage[nowrite]{frontespizio}
+
+%------------------------------------------------
+%		INDICE
+%------------------------------------------------
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+
+%------------------------------------------------
+%		IMAGE DEFINITIONS
+%------------------------------------------------
+\usepackage{pgf,tikz}
+\usepackage{graphicx}
+\usepackage[font=scriptsize, labelfont=bf]{caption}
+
+\pgfdeclareimage[width=10cm]{storingDataAsChanges}{./images/chapter01/Git/storingDataAsChanges}
+\pgfdeclareimage[width=10cm]{storingDataAsSnapshots}{./images/chapter01/Git/storingDataAsSnapshots}
+
 
 %------------------------------------------------
 %	PAGE SETTINGS
@@ -31,7 +47,7 @@
 	\fancyfoot[C]{M.Azzarelli}
 	\renewcommand{\headrulewidth}{0.3pt}}
 
-% Redefine the plain page style (include page like chapter etc)
+% Redefine the plain page style (Set up dell'header e del footer delle pagine es prima pagina capitolo)
 \fancypagestyle{plain}{
 	\fancyhf{}%
 	\fancyfoot[RO]{\thepage}
@@ -61,7 +77,7 @@
 	\thispagestyle{empty}%
 	\null \vfill\begin{center}%
 		\bfseries \abstractname \end{center}}%
-{\vfill\null}
+{\vfill\null}
 
 
 
@@ -92,7 +108,7 @@
 	\cleardoublepage
 	\null\vspace{\stretch{1}}
 	\begin{flushright}
-		\textit{A Luisa e ai miei genitori}
+		\textit{Un ringraziamento particolare ai miei genitori\\ e a Luisa che mi hanno supportato in questi anni.}
 	\end{flushright}
 	\vspace{\stretch{2}}\null
 	%----------------------------------------------
@@ -118,7 +134,15 @@
 	\fncymain	%impostta il layout per il main
 	
 	\mainmatter
-	\include{chapters/chapter01}	
+	\include{chapters/Introduzione}
+	
+
+	\include{chapters/chapter01}
+	\include{chapters/chapter02}
+	\include{chapters/chapter03}
+	\backmatter
+	\include{chapters/Conclusioni}
+	
 	\appendix
 	
 \end{document}
