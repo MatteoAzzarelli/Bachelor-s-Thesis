@@ -4,7 +4,7 @@
 
 \chapter{GitHub Classroom}
 	\section{GitHub}
-		\textbf{GitHub} è un servizio di hosting per il controllo delle versioni basato su \textit{Git}.
+		\textbf{GitHub} è un servizio di hosting per il controllo delle versioni basato su \textit{Git}~(\ref{def:Git}).
 		Esso, oltre al controllo delle versioni, fornisce anche altre funzionalità di collaborazione come il bug tracking, gestione delle attività e wiki per ogni progetto.
 		
 		GitHub offre la possibilità di creare repositories sia private che pubbliche, quest'ultime spesso sono utilizzate per condividere progetti open-source, molto importante per la comunità scientifica.
@@ -12,12 +12,12 @@
 		Nato nel 2008 questo progetto prende subito piede, infatti in nemmeno un anno raggiunge 100.000 utenti iscritti. Dopo 10 anni dalla sua nascita arriva a 22 milioni di iscrizioni diventando uno standard  e un requisito necessario per tutti i programmatori.
 		
 		Un importantissima iniziativa lanciata da GitHub è il nuovo programma \textbf{GitHub Student Developer Pack} che concede gratuitamente agli studenti un insieme dei tools e servizi più popolari come ad esempio \textit{awsEducate} ,\textit{bitnami} o ancora \textit{Microsoft Azure} e ovviamente \textit{GitHub} offre repositories private illimitate.
-		GitHub offre agli insegnanti il tool chiamato \textbf{GitHub Classroom}, che si propone come uno strumento per aiutare gli insegnanti ad  educare le nuove generazioni di sviluppatori ad utilizzare gli strumenti richiesti dalle aziende e a padroneggiare il linguaggio necessario per immettersi nel mondo del lavoro.
+		GitHub offre agli insegnanti il tool chiamato \textbf{GitHub Classroom}~(\ref{def:Classroom}), che si propone come uno strumento per aiutare gli insegnanti ad  educare le nuove generazioni di sviluppatori ad utilizzare gli strumenti richiesti dalle aziende e a padroneggiare il linguaggio necessario per immettersi nel mondo del lavoro.
 	
-		\subsection{Git}
-			Una breve digressione sul \textit{controllo di versione distribuito \textbf{Git}}.
+		\subsection{Git}\label{def:Git}
+			Una breve digressione sul \textit{controllo di versione distribuito \textbf{Git}}~\citep{ProGit2018}.
 			
-			Esso tiene traccia dei cambiamenti dei file e coordian il lavoro su questi file tra un team di più persone.
+			Esso tiene traccia dei cambiamenti dei file e coordina il lavoro su questi file tra un team di più persone.
 			\'E utilizzato prevalentemente per la gestione di codice sorgente di progetti di software, ma esso può essere utilizzato per tenere traccia dei cambiamenti in  qualsiasi set di files.
 			
 			Pensato per essere un sistema di controllo distribuito esso è stato progettato per mantenere l'integrità dei files, di garantire un'alta velocità e anche di gestire dei flussi di lavoro non lineari.
@@ -36,8 +36,73 @@
 				\pgfuseimage{storingDataAsSnapshots}
 				\captionof{figure}[GIT salvataggio dati come snapshot]{Git immagazzina i dati come snapshot del progetto nel tempo.}\label{img:storingDataAsSnapshot}
 			\end{center}
+			
+			Questa peculiarità rende Git simile ad un mini \textit{filesystem} con tutti i benefici di un gestore delle versioni.
+			Questo modo di pensare i dati rende possibile la creazione di differenti Branch paralleli, in seguito verranno analizzati.
+			
+			Ora esploriamo brevemente i controlli principali di git:
+			\begin{itemize}
+				\item Init
+				\item Clone
+				\item Commit
+				\item Fretch
+				\item Push
+				\item Pull
+			\end{itemize}
+			Per gli altri comandi si rimanda alla guida ufficiale ProGit~\citep{ProGit2018}.
+			
+			\subsubsection*{Init}
+				Se hai una directory di un progetto e vuoi iniziare il controllo di versione su di essa con Git dovrai utilizzare il comando:
+				\begin{tcolorbox}
+					\texttt{\$\qquad git init}
+				\end{tcolorbox}
+				Questo comando crea una nuova sottodirectory chiamata .git, la quale contiene tutti i file necessari per la repository.
+				A questo punto ancora non è tenuta traccia di alcun file.
+				Se vuoi iniziare il controllo di versione su file già preesistenti dovrai aggiungere i file alla repository e poi fare un commit iniziale, ad esempio aggiungiamo tutti i file \verb|.c| e un file di licenza  e facciamo il commit con un messaggio:
+				\begin{tcolorbox}
+					\texttt{\$\qquad git add *.c \\ \$\qquad git add LICENSE \\ \$\qquad git commit -m 'progetto versione iniziale'}
+				\end{tcolorbox}
+				A questo punto abbiamo una Git repository con i file tracciati e con un commit iniziale.
+			
+			\subsubsection*{Clone}
+				Molto spesso ci troviamo a lavorare con progetti già avviati, quindi in questo caso dovremmo utilizzare il comando \verb|git clone <url>| per, appunto, clonare la repository desiderata. Esempio:
+				\begin{tcolorbox}
+					\texttt{\$\qquad git clone https://github.com/MatteoAzzarelli/GitHub\\ClassroomDownloader.git}
+				\end{tcolorbox}
+				In questo modo verrà creata una directory chiamata ClassroomDownloader, già inizializzata con la cartella .git, dove verranno scaricati tutti i file del progetto pronti per essere utilizzati.
+				 
+			
+			\subsubsection*{Commit}
+				Forse è il comando più utilizzato, in quanto permette di rendere effettive le modifiche ai file. Aggiungendo il flag \verb|-m| abbiamo la possibilità di mettere un commento al commit, così da poter capire e far capire anche ai collaboratori quale modifiche sono state apportate. Esempio:
+				\begin{tcolorbox}
+					\texttt{\$\qquad git commit -m 'Fix al Bug\#'}
+				\end{tcolorbox}
+			
+			\subsubsection*{Fetch}
+				Per prendere i dati dal progetto remoto, ad esempio per aggiornare i file con le modifiche apportate da un collaboratore, è possibile utilizzare il seguente comando:
+				\begin{tcolorbox}
+					\texttt{\$\qquad git fetch <remote>}
+				\end{tcolorbox}
+				dove <remote> è il nome del server remoto. si possono visualizzare i server remoti tramite il comando \verb|git remote| , il server di default è chiamato \verb|origin|.
+			
+			
+			\subsubsection*{Push}
+				Nel momento in cui vuoi condividere con gli altri collaboratori le tue modifiche, dovrai caricarle nel server i tuoi file con il comando se \verb|git push <remote> <branch>|. Esempio:
+				\begin{tcolorbox}
+					\texttt{\$\qquad git push origin master}
+				\end{tcolorbox}
+				Il branch di default è chiamato master. Un branch è un ramo del progetto, questi spesso vengono utilizzati per aggiungere delle features al progetto, senza influire sulla versione base se la modifica non dovesse andare a buon fine. I rami possono terminare senza essere integrati nella versione base come si vede nel branch \textit{Feature 2} dell'immagine~\ref{img:branch}, oppure possono essere riuniti ad un altro branch come ad esempio \textit{Feature 1} o \textit{Develop} dell'immagine~\ref{img:branch}.
+				
+				\begin{center}
+					\pgfuseimage{branch}
+					\captionof{figure}{Esempio di un workflow a branch}
+					\label{img:branch}
+				\end{center}
+			
+			\subsubsection*{Pull}
+				Il comando \verb|git pull| generalmente recupera i dati dal server da cui originariamente sono stati clonati e tenta automaticamente di unirlo al codice su cui stai attualmente lavorando. Se non dovesse riuscire ad unire i file chiederà all'utente di risolvere i conflitti generati.
 
-		\subsection{GitHub Classroom} 
+		\subsection{GitHub Classroom}\label{def:Classroom}
 	
 	
 

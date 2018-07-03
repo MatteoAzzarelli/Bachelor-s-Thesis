@@ -1,0 +1,14 @@
+% Encoding: UTF-8
+
+@Book{ProGit2018,
+  title         = {Pro Git},
+  publisher     = {Apress},
+  year          = {2018},
+  author        = {Chacon, S. and Straub, B.},
+  series        = {The expert's voice},
+  __markedentry = {[MdueA:6]},
+  file          = {:books/ProGit2018 - Pro Git.pdf:PDF},
+  url           = {http://git-scm.com/book/en/v2},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
