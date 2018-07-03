@@ -1,2 +1,4 @@
 # Bachelor-s-Thesis
 Bachelor's Thesis in Computer Science UNIPG
+
+Title: IMPLEMENTATION OF A TOOL SUPPORTING THE AUTOMATIC EVALUATION OF GITHUB PROJECTS
