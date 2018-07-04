@@ -2,3 +2,36 @@
 % !TEX encoding = UTF-8
 % !TEX program = pdflatex
 \chapter{Studio ed implementazione}
+	L'applicazione sviluppata consente di accedere al proprio account GitHub, selezionare l'organizzazione utilizzata per Classroom e infine di scaricare le repositories degli studenti, le quali sono organizzate a loro volta in progetti, i quali corrispondono agli assignment di GitHub Classroom.
+	
+	Una volta selezionato il progetto da voler prendere in analisi è possibile selezionare le varie repositories contenenti il lavoro degli studenti per poi essere scaricate nella cartella che si desidera.
+	Le repositories possono essere scaricate in due modalità \textit{Salta} o \textit{Aggiorna}. La prima consente di saltare le repository già scaricate in precedenza, mentre la seconda modalità consente di aggiornare all'ultimo commit effettuato nella repository.
+	
+	Una volta scaricati i lavori che si vogliono analizzare si può eseguire il controllo del plagio. Esso è possibile tramite il tasto nella barra superiore dell'applicazione. Una volta cliccato il pulsante verrà richiesto di selezionare prima la cartella contenente le repositories da analizzare e poi la cartella contenente i files base dell'assignment.
+	I significati di queste directory verranno analizzati in dettaglio nella sezione dedicata a MOSS~(\ref{def:MOSS})
+	
+	
+	\section{MOSS}\label{def:MOSS}	
+		\textbf{MOSS} è un sistema automatico per determinare la similarità dei sorgenti di programmi. 
+		
+		MOSS sta per Measure Of Software Similarity, accetta gruppi di documenti e ritorna un insieme di pagine HTML che mostrano, dove significanti, sezioni di coppie di documenti molto simili. MOSS è principalmente usato per \textit{scovare plagi} in progetti di programmazione in informatica e altri corsi di ingegneria, sebbene comunque supporti molti altri formati di testo. 
+		
+		\subsection*{Funzionamento}
+		Il servizio usa una robusta selezione, cioè sceglie poche fingerprint\footnote{In informatica un \textit{algoritmo di fingerprinting} è una procedura che mappa un elemento di dati arbitrariamente grande in una stringa di bit molto più breve che identifica in modo univoco i dati di origine.} per la stessa qualità di risultati, rendendolo più efficiente e scalabile rispetto ad altri algoritmi.
+		
+		In MOSS, l'informazione posizionale, cioè il documento e il numero di linea, è memorizzato per ciascuna fingerprint selezionata. 
+		
+		Il \textit{primo passo} dell'algoritmo costruisce un indice che mappa le fingerprint alle locazioni per tutti i documenti, come l'indice invertito costruito dai motori di ricerca per mappare parole a posizioni nei documenti.
+		Nel \textit{secondo passo}, ciascun documento viene effettuata la fingerprint una seconda volta e le fingerprint selezionate vengono cercate nell'indice; questo ritorna la lista di tutte le fingerprint risultanti per ciascun documento. 
+		
+		Ora la lista delle finfgerprint risultanti per un documento \textit{d} possono contenere le fingerprint di molti documenti differenti \textit{ d1,d2,… }.
+		Al prossimo passo, la lista delle fingerprint risultanti per ciascun documento \textit{d} viene ordinata per documento e i risultati vengono raggruppati per ciascun paio di documenti (d,d1),(d,d2). 
+		
+		Le coppie di documenti vengono ordinati per rank dato dalla dimensione (numero di fingerprint) e i più grandi vengono riportati all'utente, cioò i documenti con maggior numero di plagi saranno visualizzati per primi. 
+		
+		Notate che fino a quest'ultimo passo, non è stata richiesta nessuna coppia. 
+		Questo è molto importante, poiché non potremmo sperare di effettuare il rilevamento di copie confrontando ciascuna coppia di documenti in un grande corpus, rendendolo per questo molto efficiente.
+
+		MOSS ha varie centinaia di utenti che sperano di trovare plagi in una moltitudine di dati di vari tipi. Esso richiede di specificare il tipo di documenti che andrà ad analizzare. Questo perché per ciascun formato di documenti, provvede ad eliminare le caratteristiche che non dovrebbero distinguere i vari documenti (ad esempio, si elimina gli spazi bianchi dal testo). 
+		Questo documento generato da questa scrematura è l'input da dare al motore fingerprint, il quale non sa niente riguardo i differenti tipi di documento, caratteristica che lo rende fortemente scalabile. 
+	
