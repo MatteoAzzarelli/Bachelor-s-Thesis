@@ -28,6 +28,7 @@
 \pgfdeclareimage[width=10cm]{branch}{./images/chapter01/Git/branch}
 \pgfdeclareimage[width=10cm]{GitHubClassroom}{./images/chapter01/Git/GitHubClassroom}
 
+
 %------------------------------------------------
 %	PAGE SETTINGS
 %------------------------------------------------
@@ -68,9 +69,6 @@
 \titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
 
-
-
-
 %----------------------------------------------
 %		Define abstract environment
 %----------------------------------------------
@@ -89,10 +87,10 @@
 
 
 %----------------------------------------------
-%		BOX PER COMANDI TERMINALE
+%		BOX
 %----------------------------------------------
 \usepackage[most]{tcolorbox}
-
+\newcommand\tab[1][1cm]{\hspace*{#1}}	% define new command tab
 
 
 \begin{document}

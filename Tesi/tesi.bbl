@@ -1,9 +1,14 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aiken(1994-1997)]{AikenMOSS}
+Alex Aiken.
+\newblock Moss: Asystem for detectiong software similarity, 1994-1997.
+\newblock URL \url{https://theory.stanford.edu/~aiken/moss/}.
 
 \bibitem[Chacon and Straub(2018)]{ProGit2018}
 S.~Chacon and B.~Straub.
@@ -22,5 +27,10 @@ Alan Parker and James O.~Hamblen.
 \newblock Computer algorithms for plagiarism detection.
 \newblock \emph{Education, IEEE Transactions on}, 32:\penalty0 94--99, June
   1989.
+
+\bibitem[Zielke()]{MOJI}
+Björn Zielke.
+\newblock Moji client for the moss plagiarism detection service.
+\newblock URL \url{https://zielke.it/moji/}.
 
 \end{thebibliography}

@@ -11,7 +11,7 @@
   url           = {http://git-scm.com/book/en/v2},
 }
 
-@Misc{Clough00plagiarismin,
+@Misc{Clough2000,
   author = {Paul Clough},
   title  = {Plagiarism in natural and programming languages: an overview of current tools and technologies},
   year   = {2000},
@@ -29,6 +29,19 @@
   month         = jun,
   __markedentry = {[MdueA:6]},
   file          = {:books/Computer Algorithms for Plagiarism Detection.pdf:PDF},
+}
+
+@Misc{AikenMOSS,
+  author = {Alex Aiken},
+  title  = {MOSS: Asystem for detectiong software similarity},
+  year   = {1994-1997},
+  url    = {https://theory.stanford.edu/~aiken/moss/},
+}
+
+@Misc{MOJI,
+  author = {Björn Zielke},
+  title  = {MOJI client for the MOSS plagiarism detection service},
+  url    = {https://zielke.it/moji/},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
