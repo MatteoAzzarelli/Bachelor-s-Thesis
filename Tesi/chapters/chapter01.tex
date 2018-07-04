@@ -11,7 +11,7 @@
 		
 		Nato nel 2008 questo progetto prende subito piede, infatti in nemmeno un anno raggiunge 100.000 utenti iscritti. Dopo 10 anni dalla sua nascita arriva a 22 milioni di iscrizioni diventando uno standard  e un requisito necessario per tutti i programmatori.
 		
-		Un importantissima iniziativa lanciata da GitHub è il nuovo programma \textbf{GitHub Student Developer Pack} che concede gratuitamente agli studenti un insieme dei tools e servizi più popolari come ad esempio \textit{awsEducate} ,\textit{bitnami} o ancora \textit{Microsoft Azure} e ovviamente \textit{GitHub} offre repositories private illimitate.
+		Un importantissima iniziativa lanciata da GitHub è il nuovo programma \textbf{GitHub Student Developer Pack} che concede gratuitamente agli studenti un insieme dei tools e servizi più popolari come ad esempio \textit{awsEducate}, \textit{bitnami} o ancora \textit{Microsoft Azure} e ovviamente \textit{GitHub} offre repositories private illimitate.
 		GitHub offre agli insegnanti il tool chiamato \textbf{GitHub Classroom}~(\ref{def:Classroom}), che si propone come uno strumento per aiutare gli insegnanti ad  educare le nuove generazioni di sviluppatori ad utilizzare gli strumenti richiesti dalle aziende e a padroneggiare il linguaggio necessario per immettersi nel mondo del lavoro.
 	
 		\subsection{Git}\label{def:Git}
@@ -22,7 +22,7 @@
 			
 			Pensato per essere un sistema di controllo distribuito esso è stato progettato per mantenere l'integrità dei files, di garantire un'alta velocità e anche di gestire dei flussi di lavoro non lineari.
 			
-			Questo magnifico software è stato creato da \textit{Linus Torvalds} nel 2005 insieme ad altri suoi colleghi per facilitare lo sviluppo del kernel di Linux .
+			Questo magnifico software è stato creato da \textit{Linus Torvalds} nel 2005 insieme ad altri suoi colleghi per facilitare lo sviluppo del kernel di Linux.
 			
 			Git si distingue da tutti gli altri software di versione per il modo in cui immagazzina i dati. A differenza dei precedenti VCS che salvano i dati come una lista delle modifiche (figura~\ref{img:storingDataAsChanges}), Git salva i dati come delle istantanee (figura~\ref{img:storingDataAsSnapshot}). 
 			
@@ -40,7 +40,8 @@
 			Questa peculiarità rende Git simile ad un mini \textit{filesystem} con tutti i benefici di un gestore delle versioni.
 			Questo modo di pensare i dati rende possibile la creazione di differenti Branch paralleli, in seguito verranno analizzati.
 			
-			Ora esploriamo brevemente i controlli principali di git:
+			Ora esploriamo brevemente i controlli principali di Git:
+			
 			\begin{itemize}
 				\item Init
 				\item Clone
@@ -87,11 +88,11 @@
 			
 			
 			\subsubsection*{Push}
-				Nel momento in cui vuoi condividere con gli altri collaboratori le tue modifiche, dovrai caricarle nel server i tuoi file con il comando se \verb|git push <remote> <branch>|. Esempio:
+				Nel momento in cui vuoi condividere con gli altri collaboratori le tue modifiche, dovrai caricarle nel server i tuoi file con il comando se \texttt{git push <remote> <branch>}. Esempio:
 				\begin{tcolorbox}
 					\texttt{\$\qquad git push origin master}
 				\end{tcolorbox}
-				Il branch di default è chiamato master. Un branch è un ramo del progetto, questi spesso vengono utilizzati per aggiungere delle features al progetto, senza influire sulla versione base se la modifica non dovesse andare a buon fine. I rami possono terminare senza essere integrati nella versione base come si vede nel branch \textit{Feature 2} dell'immagine~\ref{img:branch}, oppure possono essere riuniti ad un altro branch come ad esempio \textit{Feature 1} o \textit{Develop} dell'immagine~\ref{img:branch}.
+				Il branch di default è chiamato master. Un branch è un ramo del progetto, questi spesso vengono utilizzati per aggiungere delle features al progetto, senza influire sulla versione base se la modifica non dovesse andare a buon fine. I rami possono terminare senza essere integrati nella versione base come si vede nel branch \textit{Feature 2} in figura~\ref{img:branch}, oppure possono essere riuniti ad un altro branch come ad esempio \textit{Feature 1} o \textit{Develop} in figura~\ref{img:branch}.
 				
 				\begin{center}
 					\pgfuseimage{branch}

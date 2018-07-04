@@ -34,9 +34,17 @@
 	
 			MOSS ha varie centinaia di utenti che sperano di trovare plagi in una moltitudine di dati di vari tipi. Esso richiede di specificare il tipo di documenti che andrà ad analizzare. Questo perché per ciascun formato di documenti, provvede ad eliminare le caratteristiche che non dovrebbero distinguere i vari documenti (ad esempio, si elimina gli spazi bianchi dal testo). 
 			Questo documento generato da questa scrematura è l'input da dare al motore fingerprint, il quale non sa niente riguardo i differenti tipi di documento, caratteristica che lo rende fortemente scalabile.
-		
+			
 		\subsection*{Il servizio}
 			MOSS mette a disposizione un web services accessibile tramite vari script e librerie implementate negli anni dagli sviluppatori di tutto il mondo. In particolare nel progetto realizzato è stata usata la libreria java \textbf{MOJI}~\citep{MOJI}, la quale permette di implementare agevolmente un client per interfacciarsi con il servizio offerto da MOSS.
+			
+			Per prima cosa bisogna registrarsi al servizio inviando una e-mail ll'indirizzo \href{mailto:moss@moss.stanford.edu}{\nolinkurl{moss@moss.stanford.edu}} con oggetto vuoto e con corpo dell'email come segue:
+			\begin{tcolorbox}
+				registeruser 
+				mail \textit{username@domain}
+			\end{tcolorbox}
+			dove l'ultima parte in italics è il tuo indirizzo email.
+			Dopo pochi minuti riceverai nella mail indicata le istruzioni sul funzionamento di MOSS e cercando \textit{\$userid} si troverà il token di autenticazione per poter utilizzare il servizio.
 			
 			Questa libreria permette di inviare le repositories da controllare in blocco, cioè passando come parametro una cartella strutturata come è mostrato successivamente.
 			
@@ -52,5 +60,30 @@
 					}
 			\end{tcolorbox}
 			
-			Oltre alle repositories da analizzare è anche possibile inviare una cartella contenente la traccia base. Quest'ultima è utilizzata per ridurre ulteriormente la possibilità di errori nella valutazione dei plagi e quindi aumentare l'affidabilità dei risultati.
-	
+			Oltre alle repositories da analizzare è anche possibile inviare una cartella contenente la traccia base. Quest'ultima è l'insieme dei file dati dal professore agli studenti ed è utilizzata per ridurre ulteriormente la possibilità di errori nella valutazione dei plagi e quindi aumentare l'affidabilità dei risultati.
+			
+			MOSS da la possibilità odi settare altri parametri come: 
+			\begin{itemize}
+				\item \textbf{optC}: è un commento che apparirà nella pagina HTML di ritorno di MOSS.
+				\item \textbf{optD}: indica che l'invio è strutturato a cartelle e non a file. In MOJI c'è solo la versione a Directory.
+				\item \textbf{optM}: una porzione di codi quanto specificato. Fornisce un metodo semplice per rilevare il codice base/modello.
+				\item \textbf{optN}: definisce quante coppie si devono mostrare nella pagina dei risultai.
+				\item \textbf{optX}: supporto alle fatures sperimentali. Settare a 1 oer usare il server sperimentale di MOSS.
+			\end{itemize}
+			
+			Dopo pochi secondi che si sono inviati i documenti da analizzare verrà ritornato un URL che porta alla pagina HTML con i risultai (figura~\ref{img:MOSSResults}). I risultati rimarranno nei server di MOSS per circa 14 giorni dopo l'invio della richiesta. All'interno della pagina dei risultati si troveranno le coppie dei progetti incriminati con la rispettiva percentuale di codice simile e il numero righe di codice sospette. La percentuale dei risultati indica il grado di sovrapposizione tra il progetto stesso e quello con cui si è comparato.
+			
+			\begin{center}
+				\pgfuseimage{MOSSResults}
+				\captionof{figure}{Esempio di risultati di MOSS}
+				\label{img:MOSSResults}
+			\end{center}
+			
+			Aprendo uno dei risultati verranno mostrati i sorgenti a confronto (figura~\ref{img:MOSSResultMatch}) e nella parte alta della pagina HTML verranno visualizzati in vari colori le parti di codice simili.
+			\begin{center}
+				\pgfuseimage{MOSSResultMatch}
+				\captionof{figure}{Esempio pagina analisi sospetto plagio di MOSS}
+				\label{img:MOSSResultMatch}
+			\end{center}
+			
+			Un'altro aspetto da tenere in considerazione è la privacy e quindi sono state prese delle precauzioni per mantenere private le pagine dei risultati. Per prima cosa i risultati non possono essere scansionati da robots o sfogliati da persone che navigano nel Web. Inoltre il numero casuale nell'URL viene reso noto solo all'account che ha inviato la query e non vi è alcun modo per accedere ai risultati tranne che attraverso quell'URL. Per concludere, le pagine dei risultati scadono automaticamente dopo 14 giorni e il codice non viene mantenuto nel server. L'unione di queste accortezze rende molto basso il potenziale di abuso.
