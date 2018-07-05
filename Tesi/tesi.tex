@@ -22,13 +22,27 @@
 \usepackage{pgf,tikz}
 \usepackage{graphicx}
 \usepackage[font=scriptsize, labelfont=bf]{caption}
+\usepackage[font=scriptsize]{subcaption}
+\renewcommand\thesubfigure{\alph{subfigure})}
+\DeclareCaptionLabelFormat{opening}{(#2}
+\captionsetup[subfigure]{labelformat=opening}
 
 \pgfdeclareimage[width=10cm]{storingDataAsChanges}{./images/chapter01/Git/storingDataAsChanges}
 \pgfdeclareimage[width=10cm]{storingDataAsSnapshots}{./images/chapter01/Git/storingDataAsSnapshots}
 \pgfdeclareimage[width=10cm]{branch}{./images/chapter01/Git/branch}
 \pgfdeclareimage[width=10cm]{GitHubClassroom}{./images/chapter01/GitHubClassroom}
+
+\pgfdeclareimage[width=10cm]{PlagirismLevels}{./images/chapter02/PlagirismLevels}
+\pgfdeclareimage[width=5.6cm]{JPlag01}{./images/chapter02/JPlag01}
+\pgfdeclareimage[width=13cm]{JPlag02}{./images/chapter02/JPlag02}
+
 \pgfdeclareimage[width=12cm]{MOSSResults}{./images/chapter03/MOSS/MOSSResults}
 \pgfdeclareimage[width=12cm]{MOSSResultMatch}{./images/chapter03/MOSS/MOSSResultMatch}
+\pgfdeclareimage[width=13cm]{MVCInterfaces}{./images/chapter03/Implementazione/MVCInterfaces}
+\pgfdeclareimage[width=13cm]{GitHubClasses}{./images/chapter03/Implementazione/GitHubClasses}
+\pgfdeclareimage[width=13cm]{InterfacciaGrafica}{./images/chapter03/Implementazione/InterfacciaGrafica}
+
+\pgfdeclareimage[width=12cm]{MVCClass}{./images/chapter03/Implementazione/MVC/MVCClass}
 
 %------------------------------------------------
 %	PAGE SETTINGS
@@ -93,7 +107,6 @@
 \usepackage[most]{tcolorbox}
 \newcommand\tab[1][1cm]{\hspace*{#1}}	% define new command tab
 
-
 \begin{document}
 
 	\fncyfront
@@ -121,17 +134,11 @@
 	\cleardoublepage
 	\null\vspace{\stretch{1}}
 	\begin{flushright}
-		\textit{Un ringraziamento particolare ai miei genitori\\ e a Luisa che mi hanno supportato in questi anni.}
+		\textit{Ringrazio il prof Francesco Santini\\per i preziosi insegnamenti che mi ha trasmesso.\\\vspace{1cm}
+		Un ringraziamento particolare ai miei genitori\\ e a Luisa per il grande supporto datomi\\in questi anni che mi ha permesso\\di raggiungere questo importante traguardo. }
 	\end{flushright}
 	\vspace{\stretch{2}}\null
 	%----------------------------------------------
-
-	%----------------------------------------------
-	%	Abstract
-	%----------------------------------------------
-	\begin{abstract}
-		Contenuto del sommario
-	\end{abstract}
 
 
 	\frontmatter	%impostta il layout per il menu'
@@ -140,7 +147,6 @@
 	%----------------------------------------------
 	\tableofcontents
 	\listoffigures
-	\listoftables
 	
 	\cleardoublepage
 	\pagestyle{fancy}

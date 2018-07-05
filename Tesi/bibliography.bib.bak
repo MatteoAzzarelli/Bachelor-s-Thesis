@@ -44,4 +44,51 @@
   url    = {https://zielke.it/moji/},
 }
 
+@Article{Faidhi1987,
+  author     = {Faidhi, J. A. W. and Robinson, S. K.},
+  title      = {An Empirical Approach for Detecting Program Similarity and Plagiarism Within a University Programming Environment},
+  journal    = {Comput. Educ.},
+  year       = {1987},
+  volume     = {11},
+  number     = {1},
+  pages      = {11--19},
+  month      = jan,
+  issn       = {0360-1315},
+  acmid      = {27321},
+  address    = {Oxford, UK, UK},
+  issue_date = {Jan. 1987},
+  numpages   = {9},
+  publisher  = {Elsevier Science Ltd.},
+}
+
+@Misc{SIM3.0.2,
+  author = {Dick Grune},
+  title  = {The software and text similarity tester SIM},
+  url    = {https://dickgrune.com/Programs/similarity_tester/},
+}
+
+@Article{Whale1990,
+  author  = {Whale, G.},
+  title   = {Identification of Program Similarity in Large Populations},
+  journal = {The Computer Journal},
+  year    = {1990},
+  volume  = {33},
+  number  = {2},
+  pages   = {140-146},
+  file    = {:books/Identification of Program Similarity in Large Populations.pdf:PDF},
+  url     = {http://dx.doi.org/10.1093/comjnl/33.2.140},
+}
+
+@Misc{JPlag,
+  author = {JPlag},
+  title  = {JPlag},
+  url    = {https://jplag.ipd.kit.edu/},
+}
+
+@Misc{GitHubAPI,
+  author = {Kohsuke Kawaguchi},
+  title  = {GitHub API},
+  url    = {http://github-api.kohsuke.org/},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

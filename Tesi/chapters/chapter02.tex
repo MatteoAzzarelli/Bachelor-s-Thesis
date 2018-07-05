@@ -1,7 +1,146 @@
 % !TEX root = ../tesi.tex
 % !TEX encoding = UTF-8
 % !TEX program = pdflatex
-\chapter{Lavori correlati}
-	Parker e Hamblen~\citep{Parker1989} definiscono il plagio di software come "un programma che è stato prodotto da un altro con un esiguo numero di trasformazioni di routine". 
+\chapter{Lavori correlati}\label{def:PlagiarismDetection}
+	Gli autori di~\citep{Parker1989} definiscono il plagio di software come "un programma che è stato prodotto da un altro e riproposto con un esiguo numero di trasformazioni di routine".
 	
-	Le trasformazioni che possono aver luogo possono variare da quelle più semplici (come cambiare i commenti nel codice oppure cambiare I nomi delle variabili) a quelle più complesse (rimpiazzare strutture di controllo con altre equivalenti, ad esempio sostituire un ciclo "for" con un "while"). 
+	Le trasformazioni che possono aver luogo possono variare da quelle più semplici (come cambiare i commenti nel codice oppure cambiare i nomi delle variabili) a quelle più complesse (rimpiazzare strutture di controllo con altre equivalenti, ad esempio sostituire un ciclo "for" con un "while"). Questo può essere visualizzato usando i sei livelli rappresentati nello spettro del plagio (figura~\ref{img:PlagirismLevels}) realizzato da \citep{Faidhi1987}.
+	
+	Una proprietà importante di qualsiasi sistema è la corretta individuazione di codice sospetto. 
+	C'è una netta differenza tra similarità di codice nata casualmente e dovuta al plagio. 
+	Questo è molto simile a individuare parole o frasi "inusuali" nel testo scritto. 
+	
+	\begin{center}
+		\pgfuseimage{PlagirismLevels}
+		\captionof{figure}{Raffigura i vari livelli di plagio all'interno di un programma}
+		\label{img:PlagirismLevels}
+	\end{center}
+
+	Una fonte molto utile per la detenzione del plagio nei software è l'aticolo di \citep{Whale1990} che ha fatto una lista dei potenziali metodi o stratagemmi per camuffare il plagio, inclusi i seguenti:
+	\begin{itemize}
+		\item Cambiare i commenti,
+		\item Cambiare il tipo di dato (es. da float a double),
+		\item Cambiare il nome delle variabili,
+		\item Aggiungere dichiarazioni o variabili ridondanti,
+		\item Modificare le strutture degli statements di selezione (es. modificare la struttura di un if),
+		\item Combinare porzioni di codice copiato ed originale.
+	\end{itemize}
+
+	Whale prosegue discutendo la valutazione dei sistemi di rilevamento dei plagi e di rilevamento della similitudine, tra cui anche il suo stesso tool chiamato Plague~(\ref{def:Plague}).
+
+	Ora presentiamo una breve rassegna sui migliori software di \textit{plagiarism detection}.
+	
+	\section{SIM (Software Similarity Tester)}
+		\textbf{SIM} è stato svilupppato da Dick \citep{SIM3.0.2} a Vrije Universiteit. Questo software è distribuito gratuitamente sotto forma di sorgente in linguaggio \verb|C| e testa la similarità tra programmi misurando l'affinità lessicale di testi scritti in \textit{C}, \textit{Java} , \textit{Pascal}, \textit{Modula-2}, \textit{Miranda}, \textit{Lisp}, \textit{8086 assembler code} e il linguaggio naturale.
+		
+		Dick Grune afferma che SIM è in grado di scovare il plagio nei progetti software e di trovare frammenti di codice parzialmente duplicati all'interno di quest'ultimi anche se di grandi dimensioni.
+		
+		L'output di SIM può essere processato utilizzando script da shell per produrre istogrammi o una lista di sottomissioni sospette.
+	
+	\section{Siff}
+		L'applicazione originale di questo strumento era trovare file simili in un sistema di grandi dimensioni ed il suo nome originario era \textit{Sif} 
+		La tecnica era stata utilizzata in concomitanza con altri metodi per misurare la somiglianza nei file bytecode Java. Il programma è stato poi rinominato "\textbf{Siff}". 
+
+		Siff era stato inizialmente progettato per confrontare un gran numero di file di testo per trovare affinità tra di loro. Siff è un tool di UNIX che può confrontare due file di testo per similarità, ma assumendo 1 secondo per ogni confronto, tutti confronti a coppie tra 5000 file richiederebbe più di 12 milioni di confronti e la CPU impiegherebbe all'incirca 5 mesi per completare il lavoro.
+		
+		Il nuovo algoritmo di Siff cerca di ridurre questo tempo.
+		I file vengono rappresentati in una forma compatta, la "approximate fingerprint". 
+		Questa fingerprint può essere confrontata velocemente, ma concede differenze nei file, solo una somiglianza del 25\%). 
+		Se i due file hanno 5-10 fingerprints in comune, vengono classificati come "simili", dipenderà dalla dimensione del file. 
+		Il vantaggio di questo metodo è che il fingerprint tra due file simili avrà una grande intersezione e due file non in relazione avranno invece una piccola intersezione molto probabilmente. 
+		Di solito la probabilità di trovare la stessa stringa di 50 byte in due file non in relazione è molto scarsa ma il metodo è suscettibile a "cattive" fingerprints.
+		Per esempio, quando si scrive un testo di piccole dimensioni è facile trovare molte somiglianze con altri file. Questo può portare a identificare simili due file non in relazione. Questo può avvenire estraendo soltanto del testo dai documenti.
+		
+		I vari usi di Siff possono essere: 
+		
+		\begin{itemize}
+			\item Confrontare differenti revisioni del codice di un programma per il plagio.
+			\item Trovare copie duplicate di file in un grande archivio di dati.
+			\item Trovare file simili in Internet così da ridurre la ricerca in cartelle dove ci potrebbero essere file simili come quelli già visti.
+			\item per gli editori - trovare plagio.
+			\item Per scopi accademici - trovare plagio.
+			\item Per raggruppare insieme file simile prima che vengano compressi.
+			\item Confrontare revisioni di file su macchine diverse, ad esempio quelle di casa, del lavoro o portatili. Anche se quest'ultimo punto è stato superato dal controllo di versioni come Git.
+		\end{itemize}
+		
+		
+	\section{Plague}\label{def:Plague}
+		\textbf{Plague} è l'implementazione dei suggerimenti trovati in  \citep{Whale1990}.
+		Whale nel suo paper suggerisce le misure che possono essere usate per classificare i risultati e definisce quattro termini che possono essere usati nella sua valutazione: 
+		\begin{itemize}
+			\item\textbf{Recall}: il numero di documenti rilevanti consultati come una proporzione di tutti i documenti rilevanti.
+			\item \textbf{Precision(p)}: la proporzione dei documenti rilevanti nel gruppo consultato.
+			\item \textbf{Sensitivity}: il limite affinché una data coppia di sottomissione venga nominata "simile" (abilità nel trovare somiglianze).
+			\item \textbf{Selectivity}: l'abilità di mantenere un'alta precisione con l'aumentare della sensitivity (abilità nel rifiutare le differenze).
+		\end{itemize}
+		
+		Un sistema di rilevamento dovrebbe permettere alla sensitivity di essere aggiustata, questo è simile a un sistema di recupero testi che permette all'utente di espandere o restringere una query. Questo permette uno scambio tra il numero di documenti e le somiglianze da aggiustare. Ci dovrebbe essere un limite dove la sensitivity selezionerà correttamente tutti i documenti plagiati e scarterà quelli dissimili.
+		
+		Plague presenta alcuni problemi: 
+		
+		\begin{itemize}
+			\item È difficile da far adattare a nuovi linguaggi; richiede molto tempo. 
+			\item I risultati dati in output da Plague sono due liste ordinate dagli indici H e HT che hanno bisogno di essere interpretate. I risultati non sono immediatamente ovvi.
+			\item Plague soffre di problemi di efficienza e fa affidamento su un numero addizionale di strumenti UNIX. Questo crea problemi di portabilità.
+		\end{itemize}
+		Complessivamente i risultati ottenuti sono buoni.
+		
+	\section{YAP}
+		\textbf{YAP} ovvero "Yet Another Plague" è una serie di strumenti basata su Plague~(\ref{def:Plague}.
+		Michael Wise creò la versione originale \textbf{YAP1} nel 1992 e seguì con una versione ottimizzata poco dopo chiamata \textbf{YAP2}. 
+		Nel 1996 Wise produsse la versione finale di YAP (YAP3) che lavorava in maniera molto efficiente con le sequenze trasposte. 
+		Lo scopo principale di YAP era di costruire sulle fondamenta di Plague, uno strumento che era ancora basato su tecniche di conteggio degli attributi e delle strutture, ma che superava alcuni dei problemi vissuti con queste tecniche. 
+		
+		Tutti I sistemi YAP lavorano essenzialmente nella stessa maniera e le operazioni si possono suddividere in due fasi:
+		\begin{enumerate}
+			\item La prima fase genera un token file per ciascuna sottomissione.
+			\item La seconda fase confronta coppie di token file.
+		\end{enumerate}
+		
+		I token rappresentano oggetti nel linguaggio scelto che possono essere sia strutture linguistiche oppure funzioni incorporate.
+		Tutti gli identificatori sono costanti e vanno ignorati. 
+		Un piccolo assegnamento di solito ha 100-150 token mentre uno grande ne ha 400-700. 
+		La fase di tokenizzazione per ciascun linguaggio è eseguito separatamente, ma tutte le versioni hanno la stessa struttura: 
+		
+		\begin{enumerate}
+			\item Preprocessare i report sottomessi:
+				\begin{enumerate}
+					\item Rimuovere i commenti e le print-string.
+					\item Rimuovere le lettere non trovate negli identificatori legali.
+					\item Tradurre le lettere maiuscole in minuscole.
+					\item Formare una lista di token primitivi.
+				\end{enumerate}
+			\item Cambiare i sinonimi alla forma comune. Questo è molto simile ad associare le parole ai loro iperonimi\footnote{iperonimia, ovvero quando un termine è incluso nel significato dell'altro (es: cinquecento - utilitaria -automobile)}.
+			\item Identificare blocchi di funzioni/procedure.
+			\item Stampare blocchi di funzioni nell'ordine di chiamata. Blocchi di funzioni ripetuti vengono estesi una sola volta, le chiamate successive vengono rimpiazzate da un token numerato che rappresenta quella funzione. Questo previene un'esplosione nei token.
+			\item Riconoscere e stampare token che rappresentano parti della lingua di destinazione da un dato vocabolario. Le chiamate di funzioni vengono mappate a FUN e altri identificatori vengono ignorati.
+		\end{enumerate}
+		
+		YAP è capace di gestire:
+		\begin{itemize}
+			\item Cambiamenti di commenti o nella formattazione.
+			\item Cambiamenti di identificatori.
+			\item Cambiamenti nell'ordine degli operandi.
+			\item Cambiamenti nei tipi di dato.
+			\item Rimpiazzare espressioni con altre equivalenti. YAP anche su questo, come per i punti precenti, è immune oppure a volte registra una piccola differenza (1 token).
+			\item Cambiamento nell'ordine delle statement indipendenti.
+			\item Cambiamento della struttura di statement di iterazione.
+			\item Cambiamento della struttura di statement di selezione.
+			\item Rimpiazzare chiamate di procedura dal corpo della procedura.
+			\item introduzione di statement non strutturati - questo crea 1 token di differenza.
+			\item Combinare segmenti di programma originale con altri copiati.
+		\end{itemize}
+		
+		YAP è accurato come Plague nel trovare alte somiglianze e nell'evitare di trovare risultati dove non esistono. 
+		
+	\section{JPlag}
+		Il sistema JPlag~\citep{JPlag} trova somiglianze tra più set di file di codice sorgente. JPlag non si limita a confrontare byte di testo, ma è consapevole della sintassi del linguaggio di programmazione e della struttura del programma. Questa consapevolezza lo rende robusto contro i tentativi di mascherare le somiglianze tra i file plagiati. JPlag supporta \textit{Java}, \textit{C\#}, \textit{C}, \textit{C++}, \textit{Scheme} e il linguaggio naturale.
+		
+		La forza di JPlag risiede anche nella potente interfaccia grafica per presentare i suoi risultati(Figure~\ref{img:JPlag}), che risulta essere simile a quella utilizzata da MOSS~(\ref{def:MOSS}).
+		
+		\begin{center}
+			\pgfuseimage{JPlag01}
+			\pgfuseimage{JPlag02}
+			\captionof{figure}{Esempio della visualizzazione dei risultati di JPlag e della pagina di analisi degli ultimi}
+			\label{img:JPlag}
+		\end{center}

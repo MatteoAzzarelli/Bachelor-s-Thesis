@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  4 JUL 2018 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  6 JUL 2018 01:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,6 +677,11 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \c@ContinuedFloat=\count124
 Package caption Info: hyperref package is loaded.
 )
+(c:/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+\c@subfigure=\count125
+\c@subtable=\count126
+)
 (c:/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
@@ -708,31 +713,31 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (c:/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count125
-\c@Blindtext=\count126
-\c@blind@countparstart=\count127
-\blind@countxx=\count128
-\blindtext@numBlindtext=\count129
-\blind@countyy=\count130
-\c@blindlist=\count131
-\c@blindlistlevel=\count132
-\c@blindlist@level=\count133
-\blind@listitem=\count134
-\c@blind@listcount=\count135
-\c@blind@levelcount=\count136
-\blind@mathformula=\count137
-\blind@Mathformula=\count138
-\c@blind@randomcount=\count139
-\c@blind@randommax=\count140
-\c@blind@pangramcount=\count141
-\c@blind@pangrammax=\count142
+\c@blindtext=\count127
+\c@Blindtext=\count128
+\c@blind@countparstart=\count129
+\blind@countxx=\count130
+\blindtext@numBlindtext=\count131
+\blind@countyy=\count132
+\c@blindlist=\count133
+\c@blindlistlevel=\count134
+\c@blindlist@level=\count135
+\blind@listitem=\count136
+\c@blind@listcount=\count137
+\c@blind@levelcount=\count138
+\blind@mathformula=\count139
+\blind@Mathformula=\count140
+\c@blind@randomcount=\count141
+\c@blind@randommax=\count142
+\c@blind@pangramcount=\count143
+\c@blind@pangrammax=\count144
 )
 (c:/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip55
 \bibsep=\skip56
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count143
+\c@NAT@ctr=\count145
 )
 (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2018/03/22 version 4.13 text color boxes
@@ -747,9 +752,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \tcb@upperbox=\box41
 \tcb@lowerbox=\box42
 \tcb@phantombox=\box43
-\c@tcbbreakpart=\count144
-\c@tcblayer=\count145
-\tcolorbox@number=\count146
+\c@tcbbreakpart=\count146
+\c@tcblayer=\count147
+\tcolorbox@number=\count148
 \tcb@temp=\box44
 \tcb@temp=\box45
 \tcb@temp=\box46
@@ -759,9 +764,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 
 (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '4.13'
-\c@tcbrastercolumn=\count147
-\c@tcbrasterrow=\count148
-\c@tcbraster=\count149
+\c@tcbrastercolumn=\count149
+\c@tcbrasterrow=\count150
+\c@tcbraster=\count151
 ) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '4.13'
 \tcb@waterbox=\box48
@@ -796,13 +801,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count150
+\inf@bad=\count152
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count151
-\leftroot@=\count152
+\uproot@=\count153
+\leftroot@=\count154
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count153
-\DOTSCASE@=\count154
+\classnum@=\count155
+\DOTSCASE@=\count156
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -811,15 +816,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen170
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count155
-\c@MaxMatrixCols=\count156
+\macc@depth=\count157
+\c@MaxMatrixCols=\count158
 \dotsspace@=\muskip11
-\c@parentequation=\count157
-\dspbrk@lvl=\count158
+\c@parentequation=\count159
+\dspbrk@lvl=\count160
 \tag@help=\toks35
-\row@=\count159
-\column@=\count160
-\maxfields@=\count161
+\row@=\count161
+\column@=\count162
+\maxfields@=\count163
 \andhelp@=\toks36
 \eqnshift@=\dimen171
 \alignsep@=\dimen172
@@ -839,7 +844,7 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '4.13'
 \tcbfitdim=\dimen177
 \tcb@lowerfitdim=\dimen178
 \tcb@upperfitdim=\dimen179
-\tcb@cur@hbadness=\count162
+\tcb@cur@hbadness=\count164
 ) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '4.13'
 (c:/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
@@ -848,17 +853,17 @@ Package: expl3 2018-06-01 L3 programming layer (loader)
 
 (c:/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2018-06-01 L3 programming layer (code)
-\c_max_int=\count163
-\l_tmpa_int=\count164
-\l_tmpb_int=\count165
-\g_tmpa_int=\count166
-\g_tmpb_int=\count167
-\g__kernel_prg_map_int=\count168
-\c_log_iow=\count169
-\l_iow_line_count_int=\count170
-\l__iow_line_target_int=\count171
-\l__iow_one_indent_int=\count172
-\l__iow_indent_int=\count173
+\c_max_int=\count165
+\l_tmpa_int=\count166
+\l_tmpb_int=\count167
+\g_tmpa_int=\count168
+\g_tmpb_int=\count169
+\g__kernel_prg_map_int=\count170
+\c_log_iow=\count171
+\l_iow_line_count_int=\count172
+\l__iow_line_target_int=\count173
+\l__iow_one_indent_int=\count174
+\l__iow_indent_int=\count175
 \c_zero_dim=\dimen180
 \c_max_dim=\dimen181
 \l_tmpa_dim=\dimen182
@@ -877,78 +882,78 @@ Package: expl3 2018-06-01 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count174
-\l__intarray_loop_int=\count175
+\l_keys_choice_int=\count176
+\l__intarray_loop_int=\count177
 \c__intarray_sp_dim=\dimen186
-\g__intarray_font_int=\count176
-\c__fp_leading_shift_int=\count177
-\c__fp_middle_shift_int=\count178
-\c__fp_trailing_shift_int=\count179
-\c__fp_big_leading_shift_int=\count180
-\c__fp_big_middle_shift_int=\count181
-\c__fp_big_trailing_shift_int=\count182
-\c__fp_Bigg_leading_shift_int=\count183
-\c__fp_Bigg_middle_shift_int=\count184
-\c__fp_Bigg_trailing_shift_int=\count185
-\c__kernel_randint_max_int=\count186
-\g__fp_array_int=\count187
-\l__fp_array_loop_int=\count188
-\l__sort_length_int=\count189
-\l__sort_min_int=\count190
-\l__sort_top_int=\count191
-\l__sort_max_int=\count192
-\l__sort_true_max_int=\count193
-\l__sort_block_int=\count194
-\l__sort_begin_int=\count195
-\l__sort_end_int=\count196
-\l__sort_A_int=\count197
-\l__sort_B_int=\count198
-\l__sort_C_int=\count199
-\l__tl_analysis_normal_int=\count266
-\l__tl_analysis_index_int=\count267
-\l__tl_analysis_nesting_int=\count268
-\l__tl_analysis_type_int=\count269
-\l__regex_internal_a_int=\count270
-\l__regex_internal_b_int=\count271
-\l__regex_internal_c_int=\count272
-\l__regex_balance_int=\count273
-\l__regex_group_level_int=\count274
-\l__regex_mode_int=\count275
-\c__regex_cs_in_class_mode_int=\count276
-\c__regex_cs_mode_int=\count277
-\l__regex_catcodes_int=\count278
-\l__regex_default_catcodes_int=\count279
-\c__regex_catcode_D_int=\count280
-\c__regex_catcode_S_int=\count281
-\c__regex_catcode_L_int=\count282
-\c__regex_catcode_O_int=\count283
-\c__regex_catcode_A_int=\count284
-\c__regex_all_catcodes_int=\count285
-\l__regex_show_lines_int=\count286
-\l__regex_min_state_int=\count287
-\l__regex_max_state_int=\count288
-\l__regex_left_state_int=\count289
-\l__regex_right_state_int=\count290
-\l__regex_capturing_group_int=\count291
-\l__regex_min_pos_int=\count292
-\l__regex_max_pos_int=\count293
-\l__regex_curr_pos_int=\count294
-\l__regex_start_pos_int=\count295
-\l__regex_success_pos_int=\count296
-\l__regex_curr_char_int=\count297
-\l__regex_curr_catcode_int=\count298
-\l__regex_last_char_int=\count299
-\l__regex_case_changed_char_int=\count300
-\l__regex_curr_state_int=\count301
-\l__regex_step_int=\count302
-\l__regex_min_active_int=\count303
-\l__regex_max_active_int=\count304
-\l__regex_replacement_csnames_int=\count305
-\l__regex_match_count_int=\count306
-\l__regex_min_submatch_int=\count307
-\l__regex_submatch_int=\count308
-\l__regex_zeroth_submatch_int=\count309
-\g__regex_trace_regex_int=\count310
+\g__intarray_font_int=\count178
+\c__fp_leading_shift_int=\count179
+\c__fp_middle_shift_int=\count180
+\c__fp_trailing_shift_int=\count181
+\c__fp_big_leading_shift_int=\count182
+\c__fp_big_middle_shift_int=\count183
+\c__fp_big_trailing_shift_int=\count184
+\c__fp_Bigg_leading_shift_int=\count185
+\c__fp_Bigg_middle_shift_int=\count186
+\c__fp_Bigg_trailing_shift_int=\count187
+\c__kernel_randint_max_int=\count188
+\g__fp_array_int=\count189
+\l__fp_array_loop_int=\count190
+\l__sort_length_int=\count191
+\l__sort_min_int=\count192
+\l__sort_top_int=\count193
+\l__sort_max_int=\count194
+\l__sort_true_max_int=\count195
+\l__sort_block_int=\count196
+\l__sort_begin_int=\count197
+\l__sort_end_int=\count198
+\l__sort_A_int=\count199
+\l__sort_B_int=\count266
+\l__sort_C_int=\count267
+\l__tl_analysis_normal_int=\count268
+\l__tl_analysis_index_int=\count269
+\l__tl_analysis_nesting_int=\count270
+\l__tl_analysis_type_int=\count271
+\l__regex_internal_a_int=\count272
+\l__regex_internal_b_int=\count273
+\l__regex_internal_c_int=\count274
+\l__regex_balance_int=\count275
+\l__regex_group_level_int=\count276
+\l__regex_mode_int=\count277
+\c__regex_cs_in_class_mode_int=\count278
+\c__regex_cs_mode_int=\count279
+\l__regex_catcodes_int=\count280
+\l__regex_default_catcodes_int=\count281
+\c__regex_catcode_D_int=\count282
+\c__regex_catcode_S_int=\count283
+\c__regex_catcode_L_int=\count284
+\c__regex_catcode_O_int=\count285
+\c__regex_catcode_A_int=\count286
+\c__regex_all_catcodes_int=\count287
+\l__regex_show_lines_int=\count288
+\l__regex_min_state_int=\count289
+\l__regex_max_state_int=\count290
+\l__regex_left_state_int=\count291
+\l__regex_right_state_int=\count292
+\l__regex_capturing_group_int=\count293
+\l__regex_min_pos_int=\count294
+\l__regex_max_pos_int=\count295
+\l__regex_curr_pos_int=\count296
+\l__regex_start_pos_int=\count297
+\l__regex_success_pos_int=\count298
+\l__regex_curr_char_int=\count299
+\l__regex_curr_catcode_int=\count300
+\l__regex_last_char_int=\count301
+\l__regex_case_changed_char_int=\count302
+\l__regex_curr_state_int=\count303
+\l__regex_step_int=\count304
+\l__regex_min_active_int=\count305
+\l__regex_max_active_int=\count306
+\l__regex_replacement_csnames_int=\count307
+\l__regex_match_count_int=\count308
+\l__regex_min_submatch_int=\count309
+\l__regex_submatch_int=\count310
+\l__regex_zeroth_submatch_int=\count311
+\g__regex_trace_regex_int=\count312
 \c_empty_box=\box54
 \l_tmpa_box=\box55
 \l_tmpb_box=\box56
@@ -990,19 +995,19 @@ Package: expl3 2018-06-01 L3 programming layer (code)
 \l__coffin_top_corner_dim=\dimen265
 \l__coffin_scaled_total_height_dim=\dimen266
 \l__coffin_scaled_width_dim=\dimen267
-\l__seq_internal_a_int=\count311
-\l__seq_internal_b_int=\count312
+\l__seq_internal_a_int=\count313
+\l__seq_internal_b_int=\count314
 )
 (c:/texlive/2018/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2018-06-01 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count313
+\l__driver_color_stack_int=\count315
 ))
 Package: xparse 2018-05-12 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count314
-\g__xparse_grabber_int=\count315
-\l__xparse_m_args_int=\count316
-\l__xparse_mandatory_args_int=\count317
-\l__xparse_v_nesting_int=\count318
+\l__xparse_current_arg_int=\count316
+\g__xparse_grabber_int=\count317
+\l__xparse_m_args_int=\count318
+\l__xparse_mandatory_args_int=\count319
+\l__xparse_v_nesting_int=\count320
 )
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -1021,23 +1026,23 @@ Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.13'
 Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
 
 (c:/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count319
+\lst@mode=\count321
 \lst@gtempboxa=\box69
 \lst@token=\toks39
-\lst@length=\count320
+\lst@length=\count322
 \lst@currlwidth=\dimen268
-\lst@column=\count321
-\lst@pos=\count322
+\lst@column=\count323
+\lst@pos=\count324
 \lst@lostspace=\dimen269
 \lst@width=\dimen270
-\lst@newlines=\count323
-\lst@lineno=\count324
+\lst@newlines=\count325
+\lst@lineno=\count326
 \lst@maxwidth=\dimen271
 
 (c:/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count325
-\lst@skipnumbers=\count326
+\c@lstnumber=\count327
+\lst@skipnumbers=\count328
 \lst@framebox=\box70
 )
 (c:/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
@@ -1059,7 +1064,7 @@ Library (tcolorbox): 'tcbprocessing.code.tex' version '4.13'
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 69.
 ))
-\c@tcblisting=\count327
+\c@tcblisting=\count329
 )))
 (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
 Library (tcolorbox): 'tcbexternal.code.tex' version '4.13'
@@ -1082,42 +1087,43 @@ Library (tcolorbox): 'tcbposter.code.tex' version '4.13'
 (./chapters/Conclusioni.aux))
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 110.
+
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Info: Redefining \it@ocap on input line 97.
-LaTeX Info: Redefining \it@ccap on input line 97.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Info: Redefining \it@ocap on input line 110.
+LaTeX Info: Redefining \it@ccap on input line 110.
 
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
+\scratchcounter=\count330
 \scratchdimen=\dimen272
 \scratchbox=\box71
-\nofMPsegments=\count329
-\nofMParguments=\count330
+\nofMPsegments=\count331
+\nofMParguments=\count332
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count331
+\MPscratchCnt=\count333
 \MPscratchDim=\dimen273
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
+\MPnumerator=\count334
+\makeMPintoPDFobject=\count335
 \everyMPtoPDFconversion=\toks41
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1137,7 +1143,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring ON on input line 97.
+Package hyperref Info: Link coloring ON on input line 110.
 
 (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1145,11 +1151,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count334
+\c@section@level=\count336
 )
-LaTeX Info: Redefining \ref on input line 97.
-LaTeX Info: Redefining \pageref on input line 97.
-LaTeX Info: Redefining \nameref on input line 97.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 
 (./tesi.out) (./tesi.out)
 \@outlinefile=\write6
@@ -1159,11 +1165,11 @@ LaTeX Info: Redefining \nameref on input line 97.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count335
-<tesi-frn.pdf, id=90, 597.50829pt x 845.0471pt>
+\c@lstlisting=\count337
+<tesi-frn.pdf, id=133, 597.50829pt x 845.0471pt>
 File: tesi-frn.pdf Graphic file (type pdf)
 <use tesi-frn.pdf>
-Package pdftex.def Info: tesi-frn.pdf  used on input line 102.
+Package pdftex.def Info: tesi-frn.pdf  used on input line 115.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
  [1
 
@@ -1173,8 +1179,6 @@ Package pdftex.def Info: tesi-frn.pdf  used on input line 102.
 
 ]
 [3] [4
-
-] [5] [6
 
 ] (./tesi.toc)
 \tf@toc=\write7
@@ -1190,13 +1194,6 @@ Package pdftex.def Info: tesi-frn.pdf  used on input line 102.
 
  [3] [4
 
-] (./tesi.lot)
-\tf@lot=\write9
-\openout9 = `tesi.lot'.
-
- [5]
-[6
-
 ]
 \openout2 = `chapters/Introduzione.aux'.
 
@@ -1204,7 +1201,7 @@ Package pdftex.def Info: tesi-frn.pdf  used on input line 102.
 identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 	\include{chapters/Introduzione}
+l.156 	\include{chapters/Introduzione}
                                        [1
 
 
@@ -1255,25 +1252,14 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
                    \relax 
 l.59 				\end{tcolorbox}
                          [4 <./images/chapter01/Git/storingDataAsChanges.png> <
-./images/chapter01/Git/storingDataAsSnapshots.png>]pdfTeX warning (ext4): desti
-nation with the same identifier (name{page.5}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.86 				\end{tcolorbox}
-                         [5]
+./images/chapter01/Git/storingDataAsSnapshots.png>] [5]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 99.
 See the caption package documentation for explanation.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.109 			\end{center}
-                      [6 <./images/chapter01/Git/branch.png>]) [7 <./images/cha
-pter01/GitHubClassroom.png>]
+[6 <./images/chapter01/Git/branch.png>]) [7 <./images/chapter01/GitHubClassroom
+.png>]
 \openout2 = `chapters/chapter02.aux'.
 
  (./chapters/chapter02.tex [8
@@ -1282,59 +1268,161 @@ pter01/GitHubClassroom.png>]
 
 ]
 Capitolo 2.
-) [9]
-\openout2 = `chapters/chapter03.aux'.
-
- (./chapters/chapter03.tex [10
-
-
-
-]
-Capitolo 3.
-[11] [12]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 78.
+(caption)                particular \caption on input line 15.
 See the caption package documentation for explanation.
+
+[9 <./images/chapter02/PlagirismLevels.png>] [10] [11] [12]
+Underfull \hbox (badness 1168) in paragraph at lines 113--113
+[][][]\T1/cmr/m/n/9 iperonimia, ov-ve-ro quan-do un ter-mi-ne è in-clu-so nel s
+i-gni-fi-ca-to del-l'al-tro (es:
+ []
 
 [13]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 85.
+(caption)                particular \caption on input line 144.
 See the caption package documentation for explanation.
 
-) [14 <./images/chapter03/MOSS/MOSSResults.jpg> <./images/chapter03/MOSS/MOSSRe
-sultMatch.jpg>]
+
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 142--144
+ [] 
+ []
+
+) [14 <./images/chapter02/JPlag01.png> <./images/chapter02/JPlag02.png>]
+\openout2 = `chapters/chapter03.aux'.
+
+
+(./chapters/chapter03.tex
+Capitolo 3.
+[15
+
+
+
+]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 33.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 32--33
+ [] 
+ []
+
+[16 <./images/chapter03/Implementazione/MVCInterfaces.png>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 46.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 45--46
+ [] 
+ []
+
+[17 <./images/chapter03/Implementazione/GitHubClasses.png>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 80.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 79--80
+ [] 
+ []
+
+
+Underfull \vbox (badness 3189) has occurred while \output is active []
+
+ [18]
+[19 <./images/chapter03/Implementazione/InterfacciaGrafica.png>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 109.
+See the caption package documentation for explanation.
+
+[20 <./images/chapter03/Implementazione/MVC/MVCClass.png>] [21]
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 177--184
+[][]
+ []
+
+
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 177--184
+[] 
+ []
+
+
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 194--195
+[][] 
+ []
+
+[22] [23]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 248.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 7722) has occurred while \output is active []
+
+ [24]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 255.
+See the caption package documentation for explanation.
+
+) [25 <./images/chapter03/MOSS/MOSSResults.jpg> <./images/chapter03/MOSS/MOSSRe
+sultMatch.jpg>] [26
+
+
+]
 \openout2 = `chapters/Conclusioni.aux'.
 
- (./chapters/Conclusioni.tex) [15
+ (./chapters/Conclusioni.tex) [27
 
 
+] (./tesi.bbl [28
 
 
-] (./tesi.bbl [16
+]
+Underfull \hbox (badness 1642) in paragraph at lines 26--30
+[]\T1/cmr/m/n/10.95 Alessandro Rus-so e Mas-si-mo Me-cel-la.  Eser-ci-ta-zio-ni
+ di pro-get-ta-zio-
+ []
 
 
-]) [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+Underfull \hbox (badness 4940) in paragraph at lines 26--30
+\T1/cmr/m/n/10.95 ne del soft-ware.  URL [][]$\T1/cmtt/m/n/10.95 http : / / www
+ . dis . uniroma1 . it / ~mecella /
+ []
 
-(./tesi.aux (./chapters/Introduzione.aux) (./chapters/chapter01.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+\T1/cmtt/m/n/10.95 didattica / 2013 / EsercitazioniProgettazioneSoftware / E08 
+/ Slide _
+ []
+
+) [29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
+ (./tesi.aux (./chapters/Introduzione.aux) (./chapters/chapter01.aux)
 (./chapters/chapter02.aux) (./chapters/chapter03.aux)
 (./chapters/Conclusioni.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 67B91CC6287B41E9B7B1314650C37FA9;524.
+(rerunfilecheck)             Checksum: 28B8022CE93C3F28C4B81DD9C9BCCB2C;1077.
  ) 
 Here is how much of TeX's memory you used:
- 34101 strings out of 492646
- 669604 string characters out of 6133325
- 771361 words of memory out of 5000000
- 37428 multiletter control sequences out of 15000+600000
+ 34268 strings out of 492646
+ 672124 string characters out of 6133325
+ 777022 words of memory out of 5000000
+ 37536 multiletter control sequences out of 15000+600000
  549876 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,101p,769b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,101p,769b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dis
@@ -1355,10 +1443,10 @@ exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/201
 st/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2018/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1095.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/cm-super/sftt1095.pfb>
-Output written on tesi.pdf (29 pages, 1535965 bytes).
+Output written on tesi.pdf (37 pages, 1836574 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

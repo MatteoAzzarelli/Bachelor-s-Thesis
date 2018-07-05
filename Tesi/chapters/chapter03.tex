@@ -1,8 +1,8 @@
 % !TEX root = ../tesi.tex
 % !TEX encoding = UTF-8
 % !TEX program = pdflatex
-\chapter{Studio ed implementazione}
-	L'applicazione sviluppata consente di accedere al proprio account GitHub, selezionare l'organizzazione utilizzata per Classroom e infine di scaricare le repositories degli studenti, le quali sono organizzate a loro volta in progetti, i quali corrispondono agli assignment di GitHub Classroom.
+\chapter{Studio ed implementazione}\label{def:StudioImplementazione}
+	L'applicazione è stata sviluppata~(\ref{def:Implementazione}) utilizzando \textbf{Java}. Questa consente di accedere al proprio account GitHub, selezionare l'organizzazione utilizzata per Classroom e infine di scaricare le repositories degli studenti, le quali sono organizzate a loro volta in progetti, i quali corrispondono agli assignment di GitHub Classroom.
 	
 	Una volta selezionato il progetto da voler prendere in analisi è possibile selezionare le varie repositories contenenti il lavoro degli studenti per poi essere scaricate nella cartella che si desidera.
 	Le repositories possono essere scaricate in due modalità \textit{Salta} o \textit{Aggiorna}. La prima consente di saltare le repository già scaricate in precedenza, mentre la seconda modalità consente di aggiornare all'ultimo commit effettuato nella repository.
@@ -10,21 +10,145 @@
 	Una volta scaricati i lavori che si vogliono analizzare si può eseguire il controllo del plagio. Esso è possibile tramite il tasto nella barra superiore dell'applicazione. Una volta cliccato il pulsante verrà richiesto di selezionare prima la cartella contenente le repositories da analizzare e poi la cartella contenente i files base dell'assignment.
 	I significati di queste directory verranno analizzati in dettaglio nella sezione dedicata a MOSS~(\ref{def:MOSS})
 	
-	
+	\section{Implementazione}\label{def:Implementazione}
+		Come detto in precedenza il progetto è stato realizzato con l'ausilio di \textbf{Java}.
+		Abbiamo scelto di utilizzare questo particolare linguaggio di programmazione poiché per prima cosa è cross-platform, cioè basta compilare una volta il programma per poi poter essere eseguito su qualsiasi sistema operativo avente una JVM\footnote{JVM: Java Virtual Machine}.
+		Inoltre l'eccellente documentazione a corredo di questo linguaggio e delle sue librerie ha avuto un notevole rilievo.
+		Ovviamente anche la presenza di MOJI, la libreria Java di MOSS, ha influito nella scelta.
+		Infine anche l'esperienza maturata negli anni nell'uso di questo linguaggio è stata decisiva.
+		
+		Fin da subito abbiamo optato per il \textit{pattern architetturale} \textbf{MVC - Model View Controller}~(\ref{def:MVC}) così da rendere indipendenti i tre moduli grazie anche all'aggiunta di interfacce.
+		
+		I moduli comunicano tra di loro grazie alle interfacce.
+		Questo implica che i vari moduli non conoscono come sono realizzati gli altri, ma sanno solo come è formata l'interfaccia, e quindi quali sono i "servizi" messi a disposizione.
+		
+		Potrebbe sembrare irrilevante questa scissione netta, ma in realtà permette ad esempio ad un team di sviluppo di dividersi in gruppi separati e ogni gruppo può occuparsi solo della sua sezione, dando per assodata l'interfaccia fornita dagli altri gruppi di lavoro. Credo sia buona prassi pensare in grande ed affrontare ogni progetto con professionalità e rendendolo fin da subito il più scalabile possibile.
+		
+		Inoltre un'altra accortezza è stata quella di utilizzare il \textit{pattern creazionale} \textbf{Singleton}, il quale garantisce la creazione di un unico oggetto di una classe. In particolare è stato utilizzato per garantire che gli oggetti Model, View e Controller siano unici e quindi non ci sia ambiguità nel chiamarli. Ad esempio se non si fosse utilizzato questo pattern si sarebbero potuti creare due oggetti della stessa classe con il risultato che l'applicazione non funzionerebbe correttamente.
+		
+		Di seguito in Figura~\ref{img:MVCInterfaces} viene mostrato come interagiscono le interfacce e viene evidenziato il metodo \texttt{getInstance()} delle varie classi, il quale implementa il singleton e torna come oggetto l'istanza univoca della classe stessa.
+		
+		\begin{center}
+			\pgfuseimage{MVCInterfaces}
+			\captionof{figure}{UML: Model View Controller}
+			\label{img:MVCInterfaces}
+		\end{center}
+		
+		Ovviamente le tre classi cardine di tutta l'applicazione sono proprio il \verb|Model|, il \verb|View| ed il \verb|Controller| che implementano tutti i metodi delle interfacce che gestiscono tutte le interazioni con le stesse.
+		
+		Un'altra parte fondamentale del progesso è la gestione logica delle repositories degli studenti.
+		Per implementare questa, si è optato per un'organizzazione gerarchica delle repository.
+		Si può immaginare come una piramide con alla base le repository rappresentate dagli oggetti della classe \verb|GitHubRepository|, il livello successivo è quello dei progetti rappresentati dalla gli oggetti della classe \verb|GitHubProject|e al vertice c'è l'organizzazione che racchiude tutto con la calasse \verb|GitHubOrganization|.
+		Di seguito è riportato uno schema delle Classi riguardanti GitHub con i principali metodi (Figura~\ref{img:GitHubClasses}).
+		
+		\begin{center}
+			\pgfuseimage{GitHubClasses}
+			\captionof{figure}{UML: GitHub Classes}
+			\label{img:GitHubClasses}
+		\end{center}
+		
+		
+		Tutte le organizzazioni sono memorizzate nella classe \verb|GitHubConnection|.
+		Questa classe svolge un ruolo fondamentale nella connessione a GitHub. Grazie alla libreria GitHub API di \citep{GitHubAPI} abbiamo potuto utilizzare le API di GitHub.
+		Purtroppo ancora non esistono API specifiche per GitHub Classroom. La mancanza di queste API dedicate si è sentita sopratutto per trovare gli assignment, cioè i progetti. Per fare questa selezione si è dovuto applicare un filtro sui nomi, la parte comune di quest'ultimi è proprio il nome del progetto.
+		
+		Le repository hanno il metodo \verb|downloadRepository()| che permette la connessione alla repository di GitHub e di scaricare in locale tutto il materiale. Questo è stato possibile grazie alla libreria JGit che implementa tutte le funzionalità di Git.
+		
+		L'altra parte indispensabile è quella della View.
+		\'E stato scelto di renderla essenziale e senza fronzoli così da ottimizzare e facilitare l'utilizzo da parte dell'utente.
+		Questa è stata strutturata in modo tale da dividere in due parti il JFrame, riservando la parte superiore alla connessione a GitHub, quindi l'inserimento delle credenziali. L'altra parte è dedicata alla selezione delle repository da scaricare.
+		
+		Nella parte dedicata alle credenziali è presente una checkbox che permette di salvare il nome utente di GitHub così da agevolare l'accesso. Si è sceloto di non effettuare il salvataggio della password per motivi di sicurezza.
+		
+		La parte della selezione delle repositories è abilitata esclusivamete dopo aver effettuato il login su GitHub. I due menù a tendina consentono di selezionare per prima cosa l'organizzazione e poi il progetto desiderato.
+		I progetti e le repository sono caricate dinamicamente all'interno dell'applicazione, poichè come detto in preccedenza si devono analizzare tutte le repositories per determinare a quale progetto appartengono.
+		Una volata selezionato il progetto, ad esempio l'appello dell'esame, comparirà la lista delle repositories che fanno parte di quello specifico progetto. Queste si potranno selezionare per poi scaricarle tramite l'apposito pulsante.
+		Prima di scaricare si può selezionare la modalità di download:
+		\begin{itemize}
+			\item \textbf{Salta}: se trova una repository omonima nella cartella di download verrà consierata già scaricata.
+			\item \textbf{Aggiorna}: il software si connette tramite Git e scarica la versione più recente della repository.
+		\end{itemize}
+		Una volta cliccato il pulsante di download l'applicazione chiederà all'utente di selezionare la directory dove verranno salvate le repositories.
+		In linea con l'organizzazione data nel model, si è scelto di posizionare le repositories all'interno della cartella chiamata con il nome del progetto e a sua volta situata all'interno di un'altra cartella con il nome dell'organizzazione.
+		
+		Nella barra superiore c'è la scelta della lingua (italiano e inglese) e la sezione dedicata a MOSS, la quale è attivabile cliccando nel tasto Start. Una volta cliccato il pulsante verrà chiesto prima di selezionare la directory contenente i progetti da analizzare e successivamente di selezionare la directory del modello. Dopo qualche secondo, al massimo pochi minuti apparirà un pop-up contenente il link del risultato dell'analisi effettuata da MOSS.
+		
+		Di seguito è riportata una preview dell'interfaccia grafica (Figura~\ref{img:InterfacciaGrafica}).
+		
+		\begin{center}
+			\pgfuseimage{InterfacciaGrafica}
+			\captionof{figure}{Interfaccia grafica dell'applicazione}
+			\label{img:InterfacciaGrafica}
+		\end{center}
+		
+		Come già detto in precedenza l'applicazione segue il pattern Model View Controller seguendo le linee guida come spiegato nella sezione successiva \ref{def:MVC}.
+		
+		
+		\subsection{MVC - Model View Controller}\label{def:MVC}
+			\nocite{MVC-Slide}
+			I \textit{pattern architetturali} definiscono il più alto livello di astrazione software. 
+			Esso infatti descrive la struttura di un sistema software in termini di relazioni e di interazioni che possono essere coinvolte tra i sottoinsiemi della struttura. 
+			
+			E' bene scegliere attentamente quale pattern utilizzare poiché esso influenzerà notevolmente le fasi di progettazione e soprattutto di realizzazione. 
+			
+			Il \textbf{MVC - Model View Controller} è un pattern architetturale specializzato nella progettazione e strutturazione modulare di applicazioni software interattive.
+			E' stato ideato da \textit{Trygve Reenskaug} (sviluppatore Smalltalk presso lo Xerox Palo Alto Reserch Center) nel 1979.
+			
+			Ecco le parti di cui è composto: 
+			\begin{itemize}
+				\item \textbf{Model}: modello dei dati dell'applicazione. Esso incapsula lo stato dell'applicazione e gestisce l'accesso ai dati. Gli stati poi vengono aggiornati e una volta avvenuto il cambiamento, viene mandata una notifica al view.
+
+				\item \textbf{Controller}: logica di controllo che gestisce il modello dei dati. L'interazione da parte dell'utente è permessa grazie agli eventi e ai comandi generati dal Controller, che andranno a modificare il model.
+			
+				\item \textbf{View}: rappresentazione grafica e interattiva del model. Esso definisce le modalità di presentazione dei dati dello stato dell'applicazione. \'E una rappresentazione anche interattiva dato che consente proprio l'interazione con l'utente. 
+				Riceve delle notifiche dal Model se avvengono dei cambiamenti e poi successivamente aggiorna la visualizzazione. 
+			\end{itemize}
+			
+			\begin{center}
+				\pgfuseimage{MVCClass}
+				\captionof{figure}{UML: Schema generico del pattern MVC}
+				\label{img:MVCClass}
+			\end{center}
+			
+			Inizializzazione dell'applicazione: 
+			\begin{enumerate}
+				\item Viene creato il model.
+				\item Viene creato il view il quale richiama il metodo getIstance() del model
+				\item Viene creato il controller il quale chiama il metodo getIstance() del Model e della View. 
+				\item Il view si registra come listener (o observer) del model per ricevere notifiche di aggiornamento dal model (observable).
+				\item Il controller si registra come listener ( o observer) del view per ricevere dal view (observable) gli eventi generati dall'utente.
+			\end{enumerate}
+			Interazione da parte dell'utente con l'applicazione: 
+			\begin{itemize}
+				\item Il view riconosce l'azione dell'utente (ad esempio, premere un bottone) e notifica il controller registrato come listener.
+				\item Il controller interagisce con il model per realizzare l'azione richiesta e aggiornare/modificare lo stato o i dati.
+				\item Il model notifica al view registrato come listener le modifiche e gli aggiornamenti.
+				\item Il view in base al nuovo stato, aggiorna la visualizzazione. Il nuovo stato può essere ottenuto tramite:
+				\begin{itemize}
+					\item Approccio \textbf{push}: il model notifica al view sia il cambiamento di stato che le informazioni generate. Approccio utilizzato nella nostra applicazione.
+					\item Approccio \textbf{pull}: il view riceve dal model la notifica del cambiamento di stato e poi accede al model per ottenere le informazioni aggiornate.
+				\end{itemize}
+			\end{itemize}
+			
+			Nel paradigma MVC l'interazione tra componenti è basata su meccanismi di propagazione e gestione di eventi 
+			
+			L'interazione tra il view e il controller in java avviene in base al meccanismo di propagazione e gestione eventi Swing/AWT, i componenti controller sono EventListener (es MouseListener) associati ai componenti grafici view (es JButton). 
+			Diversamente avviene invece l'interazione tra model e view: il tutto viene gestito tramite la filosofia Observer-Observable, implementato appositamente tramite la gestione di variabili con metodi get e set, i quali effetuano dei controlli ed attivano dei meccanismi di feedback per le notifiche degli eventi.
+
 	\section{MOSS}\label{def:MOSS}	
 		\textbf{MOSS} è un sistema automatico per determinare la similarità dei sorgenti di programmi~\citep{AikenMOSS}. 
 		
 		MOSS sta per Measure Of Software Similarity, accetta gruppi di documenti e ritorna un insieme di pagine HTML che mostrano, dove significanti, sezioni di coppie di documenti molto simili. MOSS è principalmente usato per \textit{scovare plagi} in progetti di programmazione in informatica e altri corsi di ingegneria, sebbene comunque supporti molti altri formati di testo. 
 		
-		\subsection*{Funzionamento~\citep{Clough2000}}
-			Il servizio usa una robusta selezione, cioè sceglie poche fingerprint\footnote{In informatica un \textit{algoritmo di fingerprinting} è una procedura che mappa un elemento di dati arbitrariamente grande in una stringa di bit molto più breve che identifica in modo univoco i dati di origine.} per la stessa qualità di risultati, rendendolo più efficiente e scalabile rispetto ad altri algoritmi.
+		\subsection[Funzionamento]{Funzionamento}
+			Come descritto nel paper~\citep{Clough2000}, il servizio usa una robusta selezione, cioè sceglie poche fingerprint\footnote{In informatica un \textit{algoritmo di fingerprinting} è una procedura che mappa un elemento di dati arbitrariamente grande in una stringa di bit molto più breve che identifica in modo univoco i dati di origine.}~\ref{def:Fingerprint} per la stessa qualità di risultati, rendendolo più efficiente e scalabile rispetto ad altri algoritmi.
 			
-			In MOSS, l'informazione posizionale, cioè il documento e il numero di linea, è memorizzato per ciascuna fingerprint selezionata. 
+			In MOSS, l'informazione posizionale, cioè il documento e il numero di linea, è memorizzato per ciascuna fingerprint selezionata.
 			
 			Il \textit{primo passo} dell'algoritmo costruisce un indice che mappa le fingerprint alle locazioni per tutti i documenti, come l'indice invertito costruito dai motori di ricerca per mappare parole a posizioni nei documenti.
-			Nel \textit{secondo passo}, ciascun documento viene effettuata la fingerprint una seconda volta e le fingerprint selezionate vengono cercate nell'indice; questo ritorna la lista di tutte le fingerprint risultanti per ciascun documento. 
+			Nel \textit{secondo passo}, per ciascun documento viene effettuata la fingerprint una seconda volta e le fingerprint selezionate vengono cercate nell'indice; questo ritorna la lista di tutte le fingerprint risultanti per ciascun documento. 
 			
-			Ora la lista delle finfgerprint risultanti per un documento \textit{d} possono contenere le fingerprint di molti documenti differenti \textit{ d1,d2,… }.
+			Ora la lista delle fingerprint risultanti per un documento \textit{d} possono contenere le fingerprint di molti documenti differenti \textit{ d1,d2,… }.
 			Al prossimo passo, la lista delle fingerprint risultanti per ciascun documento \textit{d} viene ordinata per documento e i risultati vengono raggruppati per ciascun paio di documenti (d,d1),(d,d2). 
 			
 			Le coppie di documenti vengono ordinati per rank dato dalla dimensione (numero di fingerprint) e i più grandi vengono riportati all'utente, cioò i documenti con maggior numero di plagi saranno visualizzati per primi. 
@@ -35,7 +159,53 @@
 			MOSS ha varie centinaia di utenti che sperano di trovare plagi in una moltitudine di dati di vari tipi. Esso richiede di specificare il tipo di documenti che andrà ad analizzare. Questo perché per ciascun formato di documenti, provvede ad eliminare le caratteristiche che non dovrebbero distinguere i vari documenti (ad esempio, si elimina gli spazi bianchi dal testo). 
 			Questo documento generato da questa scrematura è l'input da dare al motore fingerprint, il quale non sa niente riguardo i differenti tipi di documento, caratteristica che lo rende fortemente scalabile.
 			
-		\subsection*{Il servizio}
+			\subsubsection{Fingerprints}\label{def:Fingerprint}
+				Individuare copie parziali di file è molto più complesso rispetto a trovare delle copie complete.
+				
+				In generale molte delle tecniche che trovano le copie parziali seguono la seguente idea. 
+				
+				Si divida un documento in \textbf{k-grams}\footnote{Un k-gram è una sottostringa contigua di lunghezza k.}, dove k è un parametro scelto dall'utente.
+				
+				Per esempio, la Figura~\ref{img:fingerprintExample}.c contiene tutti i 5-gram della stringa di caratteri della Figura~\ref{img:fingerprintExample}.b derivata dalla stringa del testo di una nota canzone (Figura~\ref{img:fingerprintExample}.a). 
+				
+				\begin{figure}
+					\subcaptionbox{un po di testo [The Crystals. Da do run run, 1963]}
+					{
+						\begin{tcolorbox}
+							A do run run run, a do run run
+						\end{tcolorbox}
+					}
+					\subcaptionbox{il testo senza alcune caratteristiche irrilevanti}
+					{
+						\begin{tcolorbox}
+							adorunrunrunadorunrun
+						\end{tcolorbox}
+					}
+					
+					\subcaptionbox{la sequenza di 5-grams derivata dal testo}
+					{
+						\begin{tcolorbox}
+							adoru dorun orunr runru unrun nrunr runru
+							
+							unrun nruna runad unado nador adoru dorun
+							
+							orunr runru unrun 
+						\end{tcolorbox}
+					}
+					\captionof{figure}{Alcuni esempi di fingerprinting}\label{img:fingerprintExample}
+				\end{figure}
+
+				Notare che ci sono almeno tanti k-gram quanti sono i caratteri nel documento, cioè ogni posizione nel documento (eccetto per le ultime k-1 posizioni) segnano l'inizio di un k-gram.
+				
+				A questo punto utilizza la funzione hash per ciascun k-gram e selezioniamo tra essi qualche sottoinsieme: questi andranno a formare i fingerprint. 
+				
+				L'insieme di \textbf{fingerprint} è un piccolo sottoinsieme dell'insieme di tutti i "k-grams hashes" . 
+				
+				Un fingerprint inoltre contiene informazioni posizionali, descrivendo il documento e la locazione all'interno del documento dal quale il fingerprint è stato ricavato. 
+				
+				Se la funzione hash è stata scelta in modo tale che la probabilità di collisioni è molto bassa, allora ogni volta che due documenti condividono uno o più fingerprint, è molto probabile che loro condividono un k-gram. 
+			
+		\subsection{Il servizio}
 			MOSS mette a disposizione un web services accessibile tramite vari script e librerie implementate negli anni dagli sviluppatori di tutto il mondo. In particolare nel progetto realizzato è stata usata la libreria java \textbf{MOJI}~\citep{MOJI}, la quale permette di implementare agevolmente un client per interfacciarsi con il servizio offerto da MOSS.
 			
 			Per prima cosa bisogna registrarsi al servizio inviando una e-mail ll'indirizzo \href{mailto:moss@moss.stanford.edu}{\nolinkurl{moss@moss.stanford.edu}} con oggetto vuoto e con corpo dell'email come segue:
@@ -44,7 +214,7 @@
 				mail \textit{username@domain}
 			\end{tcolorbox}
 			dove l'ultima parte in italics è il tuo indirizzo email.
-			Dopo pochi minuti riceverai nella mail indicata le istruzioni sul funzionamento di MOSS e cercando \textit{\$userid} si troverà il token di autenticazione per poter utilizzare il servizio.
+			Dopo pochi minuti viene ricevuta nella mail indicata le istruzioni sul funzionamento di MOSS e cercando \textit{\$userid} si troverà il token di autenticazione per poter utilizzare il servizio.
 			
 			Questa libreria permette di inviare le repositories da controllare in blocco, cioè passando come parametro una cartella strutturata come è mostrato successivamente.
 			
@@ -62,7 +232,7 @@
 			
 			Oltre alle repositories da analizzare è anche possibile inviare una cartella contenente la traccia base. Quest'ultima è l'insieme dei file dati dal professore agli studenti ed è utilizzata per ridurre ulteriormente la possibilità di errori nella valutazione dei plagi e quindi aumentare l'affidabilità dei risultati.
 			
-			MOSS da la possibilità odi settare altri parametri come: 
+			MOSS da là possibilità di settare altri parametri come: 
 			\begin{itemize}
 				\item \textbf{optC}: è un commento che apparirà nella pagina HTML di ritorno di MOSS.
 				\item \textbf{optD}: indica che l'invio è strutturato a cartelle e non a file. In MOJI c'è solo la versione a Directory.
@@ -71,7 +241,7 @@
 				\item \textbf{optX}: supporto alle fatures sperimentali. Settare a 1 oer usare il server sperimentale di MOSS.
 			\end{itemize}
 			
-			Dopo pochi secondi che si sono inviati i documenti da analizzare verrà ritornato un URL che porta alla pagina HTML con i risultai (figura~\ref{img:MOSSResults}). I risultati rimarranno nei server di MOSS per circa 14 giorni dopo l'invio della richiesta. All'interno della pagina dei risultati si troveranno le coppie dei progetti incriminati con la rispettiva percentuale di codice simile e il numero righe di codice sospette. La percentuale dei risultati indica il grado di sovrapposizione tra il progetto stesso e quello con cui si è comparato.
+			Dopo pochi secondi che si sono inviati i documenti da analizzare verrà ritornato un URL che porta alla pagina HTML con i risultai (Figura~\ref{img:MOSSResults}). I risultati rimarranno nei server di MOSS per circa 14 giorni dopo l'invio della richiesta. All'interno della pagina dei risultati si troveranno le coppie dei progetti incriminati con la rispettiva percentuale di codice simile e il numero righe di codice sospette. La percentuale dei risultati indica il grado di sovrapposizione tra il progetto stesso e quello con cui si è comparato.
 			
 			\begin{center}
 				\pgfuseimage{MOSSResults}
@@ -79,7 +249,7 @@
 				\label{img:MOSSResults}
 			\end{center}
 			
-			Aprendo uno dei risultati verranno mostrati i sorgenti a confronto (figura~\ref{img:MOSSResultMatch}) e nella parte alta della pagina HTML verranno visualizzati in vari colori le parti di codice simili.
+			Aprendo uno dei risultati verranno mostrati i sorgenti a confronto (Figura~\ref{img:MOSSResultMatch}) e nella parte alta della pagina HTML verranno visualizzati in vari colori le parti di codice simili.
 			\begin{center}
 				\pgfuseimage{MOSSResultMatch}
 				\captionof{figure}{Esempio pagina analisi sospetto plagio di MOSS}

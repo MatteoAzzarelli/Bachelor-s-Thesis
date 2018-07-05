@@ -8,46 +8,50 @@ A level-1 auxiliary file: chapters/chapter03.aux
 A level-1 auxiliary file: chapters/Conclusioni.aux
 The style file: plainnat.bst
 Database file #1: bibliography.bib
+Warning--empty year in MVC-Slide
+Warning--empty year in SIM3.0.2
+Warning--empty year in JPlag
+Warning--empty year in GitHubAPI
 Warning--empty year in MOJI
-You've used 5 entries,
+You've used 11 entries,
             2773 wiz_defined-function locations,
-            630 strings with 5604 characters,
-and the built_in function-call counts, 1741 in all, are:
-= -- 154
-> -- 72
-< -- 5
-+ -- 26
-- -- 21
-* -- 107
-:= -- 273
-add.period$ -- 17
-call.type$ -- 5
-change.case$ -- 21
-chr.to.int$ -- 5
-cite$ -- 11
-duplicate$ -- 85
-empty$ -- 166
-format.name$ -- 30
-if$ -- 365
+            668 strings with 6449 characters,
+and the built_in function-call counts, 3773 in all, are:
+= -- 337
+> -- 143
+< -- 11
++ -- 53
+- -- 42
+* -- 235
+:= -- 579
+add.period$ -- 37
+call.type$ -- 11
+change.case$ -- 46
+chr.to.int$ -- 11
+cite$ -- 27
+duplicate$ -- 185
+empty$ -- 372
+format.name$ -- 59
+if$ -- 797
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 3
-newline$ -- 34
-num.names$ -- 20
-pop$ -- 55
+missing$ -- 5
+newline$ -- 66
+num.names$ -- 44
+pop$ -- 120
 preamble$ -- 1
-purify$ -- 17
+purify$ -- 36
 quote$ -- 0
-skip$ -- 73
+skip$ -- 157
 stack$ -- 0
-substring$ -- 29
-swap$ -- 6
+substring$ -- 81
+swap$ -- 13
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
-warning$ -- 1
-while$ -- 17
+type$ -- 116
+warning$ -- 5
+while$ -- 38
 width$ -- 0
-write$ -- 70
-(There was 1 warning)
+write$ -- 144
+(There were 5 warnings)

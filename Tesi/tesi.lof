@@ -5,7 +5,14 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces GIT salvataggio dati come snapshot}}{4}{figure.1.2}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Esempio di un workflow a branch\relax }}{6}{figure.1.3}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Raffigura i vari livelli di plagio all'interno di un programma\relax }}{9}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Esempio della visualizzazione dei risultati di JPlag e della pagina di analisi degli ultimi\relax }}{14}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Esempio di risultati di MOSS\relax }}{14}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Esempio pagina analisi sospetto plagio di MOSS\relax }}{14}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces UML: Model View Controller\relax }}{16}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces UML: GitHub Classes\relax }}{17}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Interfaccia grafica dell'applicazione\relax }}{19}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces UML: Schema generico del pattern MVC\relax }}{20}{figure.3.4}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Alcuni esempi di fingerprinting\relax }}{23}{figure.caption.4}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esempio di risultati di MOSS\relax }}{25}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esempio pagina analisi sospetto plagio di MOSS\relax }}{25}{figure.3.8}
 \addvspace {10\p@ }

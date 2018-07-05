@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,11 +22,46 @@ Paul Clough.
   current tools and technologies, 2000.
 \newblock URL \url{https://ir.shef.ac.uk/cloughie/papers/plagiarism2000.pdf}.
 
+\bibitem[e~Massimo~Mecella()]{MVC-Slide}
+Alessandro~Russo e~Massimo~Mecella.
+\newblock Esercitazioni di progettazione del software.
+\newblock URL
+  \url{http://www.dis.uniroma1.it/~mecella/didattica/2013/EsercitazioniProgettazioneSoftware/E08/Slide_MVC_StrutturaApplicazioni.pdf}.
+
+\bibitem[Faidhi and Robinson(1987)]{Faidhi1987}
+J.~A.~W. Faidhi and S.~K. Robinson.
+\newblock An empirical approach for detecting program similarity and plagiarism
+  within a university programming environment.
+\newblock \emph{Comput. Educ.}, 11\penalty0 (1):\penalty0 11--19, January 1987.
+\newblock ISSN 0360-1315.
+
+\bibitem[Grune()]{SIM3.0.2}
+Dick Grune.
+\newblock The software and text similarity tester sim.
+\newblock URL \url{https://dickgrune.com/Programs/similarity_tester/}.
+
+\bibitem[JPlag()]{JPlag}
+JPlag.
+\newblock Jplag.
+\newblock URL \url{https://jplag.ipd.kit.edu/}.
+
+\bibitem[Kawaguchi()]{GitHubAPI}
+Kohsuke Kawaguchi.
+\newblock Github api.
+\newblock URL \url{http://github-api.kohsuke.org/}.
+
 \bibitem[Parker and O.~Hamblen(1989)]{Parker1989}
 Alan Parker and James O.~Hamblen.
 \newblock Computer algorithms for plagiarism detection.
 \newblock \emph{Education, IEEE Transactions on}, 32:\penalty0 94--99, June
   1989.
+
+\bibitem[Whale(1990)]{Whale1990}
+G.~Whale.
+\newblock Identification of program similarity in large populations.
+\newblock \emph{The Computer Journal}, 33\penalty0 (2):\penalty0 140--146,
+  1990.
+\newblock URL \url{http://dx.doi.org/10.1093/comjnl/33.2.140}.
 
 \bibitem[Zielke()]{MOJI}
 Björn Zielke.

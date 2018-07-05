@@ -3,7 +3,7 @@
 % !TEX program = pdflatex
 
 \chapter{GitHub Classroom}
-	\section{GitHub}
+	\section{GitHub}\label{def:GitHub}
 		\textbf{GitHub} è un servizio di hosting per il controllo delle versioni basato su \textit{Git}~(\ref{def:Git}).
 		Esso, oltre al controllo delle versioni, fornisce anche altre funzionalità di collaborazione come il bug tracking, gestione delle attività e wiki per ogni progetto.
 		
@@ -24,7 +24,7 @@
 			
 			Questo magnifico software è stato creato da \textit{Linus Torvalds} nel 2005 insieme ad altri suoi colleghi per facilitare lo sviluppo del kernel di Linux.
 			
-			Git si distingue da tutti gli altri software di versione per il modo in cui immagazzina i dati. A differenza dei precedenti VCS che salvano i dati come una lista delle modifiche (figura~\ref{img:storingDataAsChanges}), Git salva i dati come delle istantanee (figura~\ref{img:storingDataAsSnapshot}). 
+			Git si distingue da tutti gli altri software di versione per il modo in cui immagazzina i dati. A differenza dei precedenti VCS che salvano i dati come una lista delle modifiche (Figura~\ref{img:storingDataAsChanges}), Git salva i dati come delle istantanee (Figura~\ref{img:storingDataAsSnapshot}). 
 			
 			\begin{center}
 				\pgfuseimage{storingDataAsChanges}
@@ -92,7 +92,7 @@
 				\begin{tcolorbox}
 					\texttt{\$\qquad git push origin master}
 				\end{tcolorbox}
-				Il branch di default è chiamato master. Un branch è un ramo del progetto, questi spesso vengono utilizzati per aggiungere delle features al progetto, senza influire sulla versione base se la modifica non dovesse andare a buon fine. I rami possono terminare senza essere integrati nella versione base come si vede nel branch \textit{Feature 2} in figura~\ref{img:branch}, oppure possono essere riuniti ad un altro branch come ad esempio \textit{Feature 1} o \textit{Develop} in figura~\ref{img:branch}.
+				Il branch di default è chiamato master. Un branch è un ramo del progetto, questi spesso vengono utilizzati per aggiungere delle features al progetto, senza influire sulla versione base se la modifica non dovesse andare a buon fine. I rami possono terminare senza essere integrati nella versione base come si vede nel branch \textit{Feature 2} in Figura~\ref{img:branch}, oppure possono essere riuniti ad un altro branch come ad esempio \textit{Feature 1} o \textit{Develop} in Figura~\ref{img:branch}.
 				
 				\begin{center}
 					\pgfuseimage{branch}
