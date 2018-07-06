@@ -13,10 +13,10 @@
 \contentsline {section}{\numberline {2.5}JPlag}{14}{section.2.5}
 \contentsline {chapter}{\numberline {3}Studio ed implementazione}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Implementazione}{15}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}MVC - Model View Controller}{19}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}MOSS}{21}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Funzionamento}{21}{subsection.3.2.1}
-\contentsline {subsubsection}{Fingerprints}{22}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Il servizio}{23}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.1.1}MVC - Model View Controller}{20}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}MOSS}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Funzionamento}{22}{subsection.3.2.1}
+\contentsline {subsubsection}{Fingerprints}{23}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Il servizio}{24}{subsection.3.2.2}
 \contentsline {chapter}{Conclusioni}{27}{chapter*.5}
 \contentsline {chapter}{Bibliografia}{29}{appendix*.6}

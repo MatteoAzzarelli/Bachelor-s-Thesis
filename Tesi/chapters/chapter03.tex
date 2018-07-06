@@ -2,31 +2,33 @@
 % !TEX encoding = UTF-8
 % !TEX program = pdflatex
 \chapter{Studio ed implementazione}\label{def:StudioImplementazione}
-	L'applicazione è stata sviluppata~(\ref{def:Implementazione}) utilizzando \textbf{Java}. Questa consente di accedere al proprio account GitHub, selezionare l'organizzazione utilizzata per Classroom e infine di scaricare le repositories degli studenti, le quali sono organizzate a loro volta in progetti, i quali corrispondono agli assignment di GitHub Classroom.
+	L'applicazione è stata sviluppata~(\ref{def:Implementazione}) utilizzando \textbf{Java}. Questa consente di accedere al proprio account GitHub, selezionare l'organizzazione utilizzata per Classroom e infine di scaricare le repositories degli studenti, le quali sono organizzate a loro volta in progetti corrispondenti agli assignment di GitHub Classroom.
 	
 	Una volta selezionato il progetto da voler prendere in analisi è possibile selezionare le varie repositories contenenti il lavoro degli studenti per poi essere scaricate nella cartella che si desidera.
 	Le repositories possono essere scaricate in due modalità \textit{Salta} o \textit{Aggiorna}. La prima consente di saltare le repository già scaricate in precedenza, mentre la seconda modalità consente di aggiornare all'ultimo commit effettuato nella repository.
 	
-	Una volta scaricati i lavori che si vogliono analizzare si può eseguire il controllo del plagio. Esso è possibile tramite il tasto nella barra superiore dell'applicazione. Una volta cliccato il pulsante verrà richiesto di selezionare prima la cartella contenente le repositories da analizzare e poi la cartella contenente i files base dell'assignment.
-	I significati di queste directory verranno analizzati in dettaglio nella sezione dedicata a MOSS~(\ref{def:MOSS})
+	Una volta scaricati i lavori che si vogliono analizzare si può eseguire il controllo del plagio. Esso è possibile tramite il tasto nella barra superiore dell'applicazione. Una volta cliccato il pulsante verrà richiesto di selezionare prima la cartella contenente le repositories da analizzare e poi la cartella contenente i files base, cioè il modello, dell'assignment.
+	I significati di queste directory verranno analizzati in dettaglio nella sezione dedicata a MOSS~(\ref{def:MOSS}).
+	
+	Abbiamo scelto di utilizzare il servizio MOSS oltre per i suoi risultati soddisfacenti anche perché è un progetto molto attivo e in continuo aggiornamento, il che lo rende sicuramente la migliore scelta gratuita.
 	
 	\section{Implementazione}\label{def:Implementazione}
 		Come detto in precedenza il progetto è stato realizzato con l'ausilio di \textbf{Java}.
 		Abbiamo scelto di utilizzare questo particolare linguaggio di programmazione poiché per prima cosa è cross-platform, cioè basta compilare una volta il programma per poi poter essere eseguito su qualsiasi sistema operativo avente una JVM\footnote{JVM: Java Virtual Machine}.
-		Inoltre l'eccellente documentazione a corredo di questo linguaggio e delle sue librerie ha avuto un notevole rilievo.
+		Inoltre l'eccellente documentazione a corredo di questo linguaggio e delle sue librerie ha avuto un notevole rilievo, credo che il miglior strumento al mondo può essere inutilizzabile se non si hanno le istruzioni adeguate.
 		Ovviamente anche la presenza di MOJI, la libreria Java di MOSS, ha influito nella scelta.
-		Infine anche l'esperienza maturata negli anni nell'uso di questo linguaggio è stata decisiva.
-		
+		Infine l'esperienza maturata negli anni nell'uso di questo linguaggio è stata decisiva nella scelta, consentendo di lavorare allo sviluppo in maniera agevole.
+
 		Fin da subito abbiamo optato per il \textit{pattern architetturale} \textbf{MVC - Model View Controller}~(\ref{def:MVC}) così da rendere indipendenti i tre moduli grazie anche all'aggiunta di interfacce.
 		
-		I moduli comunicano tra di loro grazie alle interfacce.
-		Questo implica che i vari moduli non conoscono come sono realizzati gli altri, ma sanno solo come è formata l'interfaccia, e quindi quali sono i "servizi" messi a disposizione.
+		I moduli comunicano tra di loro grazie alle interfacce \verb|IModel|, \verb|IView| e \verb|IController|.
+		Questo implica che i vari moduli non conoscono come sono realizzati gli altri, ma sanno solo come è formata l'interfaccia, e quindi quali sono i "servizi" messi a disposizione, cioè i metodi offerti.
 		
-		Potrebbe sembrare irrilevante questa scissione netta, ma in realtà permette ad esempio ad un team di sviluppo di dividersi in gruppi separati e ogni gruppo può occuparsi solo della sua sezione, dando per assodata l'interfaccia fornita dagli altri gruppi di lavoro. Credo sia buona prassi pensare in grande ed affrontare ogni progetto con professionalità e rendendolo fin da subito il più scalabile possibile.
+		Potrebbe sembrare irrilevante questa scissione netta, ma in realtà ha molti vantaggi, tra cui permette ad esempio ad un team di sviluppo di dividersi in gruppi separati e ogni gruppo può occuparsi solo della sua sezione (Model, View, Controller), dando per assodata l'interfaccia fornita dagli altri gruppi di lavoro. Credo sia buona prassi Strutturare ogni progetto in modo professionale e rendendolo fin dalla prima bozza il più scalabile possibile, così da rendere minime le modifiche e gli adattamenti se si avesse la necessità di espanderlo.
 		
 		Inoltre un'altra accortezza è stata quella di utilizzare il \textit{pattern creazionale} \textbf{Singleton}, il quale garantisce la creazione di un unico oggetto di una classe. In particolare è stato utilizzato per garantire che gli oggetti Model, View e Controller siano unici e quindi non ci sia ambiguità nel chiamarli. Ad esempio se non si fosse utilizzato questo pattern si sarebbero potuti creare due oggetti della stessa classe con il risultato che l'applicazione non funzionerebbe correttamente.
 		
-		Di seguito in Figura~\ref{img:MVCInterfaces} viene mostrato come interagiscono le interfacce e viene evidenziato il metodo \texttt{getInstance()} delle varie classi, il quale implementa il singleton e torna come oggetto l'istanza univoca della classe stessa.
+		Di seguito in Figura~\ref{img:MVCInterfaces} viene mostrato come interagiscono le interfacce e viene evidenziato il metodo \texttt{getInstance()} delle varie classi, il quale implementa il singleton e torna come oggetto l'istanza univoca della classe stessa. Farei anche notare che il costruttore è reso privato così da impedire la creazione di altri oggetti al di fuori da quello creato grazie al metodo appena introdotto.
 		
 		\begin{center}
 			\pgfuseimage{MVCInterfaces}
@@ -36,7 +38,7 @@
 		
 		Ovviamente le tre classi cardine di tutta l'applicazione sono proprio il \verb|Model|, il \verb|View| ed il \verb|Controller| che implementano tutti i metodi delle interfacce che gestiscono tutte le interazioni con le stesse.
 		
-		Un'altra parte fondamentale del progesso è la gestione logica delle repositories degli studenti.
+		Un'altra parte fondamentale del progetto è la gestione logica delle repositories degli studenti.
 		Per implementare questa, si è optato per un'organizzazione gerarchica delle repository.
 		Si può immaginare come una piramide con alla base le repository rappresentate dagli oggetti della classe \verb|GitHubRepository|, il livello successivo è quello dei progetti rappresentati dalla gli oggetti della classe \verb|GitHubProject|e al vertice c'è l'organizzazione che racchiude tutto con la calasse \verb|GitHubOrganization|.
 		Di seguito è riportato uno schema delle Classi riguardanti GitHub con i principali metodi (Figura~\ref{img:GitHubClasses}).
