@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  6 JUL 2018 10:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  6 JUL 2018 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1340,11 +1340,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ter03/Implementazione/GitHubClasses.png>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 82.
+(caption)                particular \caption on input line 84.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 81--82
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 83--84
  [] 
  []
 
@@ -1355,28 +1355,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [20 <./images/chapter03/Implementazione/InterfacciaGrafica.png>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 111.
+(caption)                particular \caption on input line 113.
 See the caption package documentation for explanation.
 
 [21 <./images/chapter03/Implementazione/MVC/MVCClass.png>] [22]
-Overfull \hbox (7.26108pt too wide) in paragraph at lines 179--186
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 181--188
 [][]
  []
 
 
-Overfull \hbox (7.26108pt too wide) in paragraph at lines 179--186
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 181--188
 [] 
  []
 
 
-Overfull \hbox (7.26108pt too wide) in paragraph at lines 196--197
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 198--199
 [][] 
  []
 
 [23] [24]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 250.
+(caption)                particular \caption on input line 252.
 See the caption package documentation for explanation.
 
 
@@ -1385,7 +1385,7 @@ Underfull \vbox (badness 7722) has occurred while \output is active []
  [25]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 257.
+(caption)                particular \caption on input line 259.
 See the caption package documentation for explanation.
 
 ) [26 <./images/chapter03/MOSS/MOSSResults.jpg> <./images/chapter03/MOSS/MOSSRe
@@ -1457,7 +1457,7 @@ exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/201
 st/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2018/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1095.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/cm-super/sftt1095.pfb>
-Output written on tesi.pdf (37 pages, 1851911 bytes).
+Output written on tesi.pdf (37 pages, 1851918 bytes).
 PDF statistics:
  568 PDF objects out of 1000 (max. 8388607)
  459 compressed objects within 5 object streams
