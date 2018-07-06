@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  6 JUL 2018 10:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  6 JUL 2018 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1355,37 +1355,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [20 <./images/chapter03/Implementazione/InterfacciaGrafica.png>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 113.
+(caption)                particular \caption on input line 112.
 See the caption package documentation for explanation.
 
-[21 <./images/chapter03/Implementazione/MVC/MVCClass.png>] [22]
-Overfull \hbox (7.26108pt too wide) in paragraph at lines 181--188
+[21 <./images/chapter03/Implementazione/MVC/MVCClass.png>] [22] [23]
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 184--191
 [][]
  []
 
 
-Overfull \hbox (7.26108pt too wide) in paragraph at lines 181--188
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 184--191
 [] 
  []
 
 
-Overfull \hbox (7.26108pt too wide) in paragraph at lines 198--199
+Overfull \hbox (7.26108pt too wide) in paragraph at lines 201--202
 [][] 
  []
 
-[23] [24]
+[24]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 252.
+(caption)                particular \caption on input line 255.
 See the caption package documentation for explanation.
 
-
-Underfull \vbox (badness 7722) has occurred while \output is active []
-
- [25]
+[25]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 259.
+(caption)                particular \caption on input line 262.
 See the caption package documentation for explanation.
 
 ) [26 <./images/chapter03/MOSS/MOSSResults.jpg> <./images/chapter03/MOSS/MOSSRe
@@ -1401,19 +1398,19 @@ sultMatch.jpg>]
 
 
 ]
-Underfull \hbox (badness 1642) in paragraph at lines 26--30
-[]\T1/cmr/m/n/10.95 Alessandro Rus-so e Mas-si-mo Me-cel-la.  Eser-ci-ta-zio-ni
- di pro-get-ta-zio-
+Underfull \hbox (badness 1715) in paragraph at lines 54--58
+[]\T1/cmr/m/n/10.95 Alessandro Rus-so and Mas-si-mo Me-cel-la.  Eser-ci-ta-zio-
+ni di pro-get-ta-
  []
 
 
-Underfull \hbox (badness 4940) in paragraph at lines 26--30
-\T1/cmr/m/n/10.95 ne del soft-ware.  URL [][]$\T1/cmtt/m/n/10.95 http : / / www
- . dis . uniroma1 . it / ~mecella /
+Underfull \hbox (badness 1454) in paragraph at lines 54--58
+\T1/cmr/m/n/10.95 zio-ne del soft-ware.  URL [][]$\T1/cmtt/m/n/10.95 http : / /
+ www . dis . uniroma1 . it / ~mecella /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--30
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 \T1/cmtt/m/n/10.95 didattica / 2013 / EsercitazioniProgettazioneSoftware / E08 
 / Slide _
  []
@@ -1432,11 +1429,11 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 Here is how much of TeX's memory you used:
  34268 strings out of 492646
  672124 string characters out of 6133325
- 777023 words of memory out of 5000000
+ 776023 words of memory out of 5000000
  37536 multiletter control sequences out of 15000+600000
  549876 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,101p,769b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,101p,770b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dis
@@ -1457,10 +1454,10 @@ exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/201
 st/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2018/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1095.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/cm-super/sftt1095.pfb>
-Output written on tesi.pdf (37 pages, 1851918 bytes).
+Output written on tesi.pdf (37 pages, 1853271 bytes).
 PDF statistics:
- 568 PDF objects out of 1000 (max. 8388607)
- 459 compressed objects within 5 object streams
+ 569 PDF objects out of 1000 (max. 8388607)
+ 460 compressed objects within 5 object streams
  98 named destinations out of 1000 (max. 500000)
  379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

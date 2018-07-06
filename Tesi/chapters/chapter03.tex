@@ -24,7 +24,7 @@
 		I moduli comunicano tra di loro grazie alle interfacce \verb|IModel|, \verb|IView| e \verb|IController|.
 		Questo implica che i vari moduli non conoscono come sono realizzati gli altri, ma sanno solo come è formata l'interfaccia, e quindi quali sono i "servizi" messi a disposizione, cioè i metodi offerti.
 		
-		Potrebbe sembrare irrilevante questa scissione netta, ma in realtà ha molti vantaggi, tra cui permette ad esempio ad un team di sviluppo di dividersi in gruppi separati e ogni gruppo può occuparsi solo della sua sezione (Model, View, Controller), dando per assodata l'interfaccia fornita dagli altri gruppi di lavoro. Credo sia buona prassi Strutturare ogni progetto in modo professionale e rendendolo fin dalla prima bozza il più scalabile possibile, così da rendere minime le modifiche e gli adattamenti se si avesse la necessità di espanderlo.
+		Potrebbe sembrare irrilevante questa scissione netta, ma in realtà ha molti vantaggi, tra cui permette ad esempio ad un team di sviluppo di dividersi in gruppi separati e ogni gruppo può occuparsi solo della sua sezione (Model, View, Controller), dando per assodata l'interfaccia fornita dagli altri gruppi di lavoro. Credo sia buona prassi strutturare ogni progetto in modo professionale e rendendolo fin dalla prima bozza il più scalabile possibile, così da rendere minime le modifiche e gli adattamenti se si avesse la necessità di espanderlo.
 		
 		Inoltre un'altra accortezza è stata quella di utilizzare il \textit{pattern creazionale} \textbf{Singleton}, il quale garantisce la creazione di un unico oggetto di una classe. In particolare è stato utilizzato per garantire che gli oggetti Model, View e Controller siano unici e quindi non ci sia ambiguità nel chiamarli. Ad esempio se non si fosse utilizzato questo pattern si sarebbero potuti creare due oggetti della stessa classe con il risultato che l'applicazione non funzionerebbe correttamente.
 		
@@ -57,7 +57,7 @@
 		Le repository hanno il metodo \verb|downloadRepository()| che permette la connessione alla repository di GitHub e di scaricare in locale tutto il materiale. Questo è stato possibile grazie alla libreria JGit che implementa tutte le funzionalità di Git.
 		
 		L'altra parte indispensabile è quella della View.
-		\'E stato scelto di renderla essenziale e senza fronzoli così da ottimizzare e facilitare l'utilizzo da parte dell'utente.
+		\`E stato scelto di renderla essenziale e senza fronzoli così da ottimizzare e facilitare l'utilizzo da parte dell'utente.
 		Questa è stata strutturata in modo tale da dividere in due parti il JFrame, riservando la parte superiore alla connessione a GitHub, quindi l'inserimento delle credenziali. L'altra parte è dedicata alla selezione delle repository da scaricare.
 		
 		Nella parte dedicata alle credenziali è presente una checkbox che permette di salvare il nome utente di GitHub così da agevolare l'accesso. Si è sceloto di non effettuare il salvataggio della password per motivi di sicurezza.
@@ -89,14 +89,13 @@
 		
 		
 		\subsection{MVC - Model View Controller}\label{def:MVC}
-			\nocite{MVC-Slide}
 			I \textit{pattern architetturali} definiscono il più alto livello di astrazione software. 
 			Esso infatti descrive la struttura di un sistema software in termini di relazioni e di interazioni che possono essere coinvolte tra i sottoinsiemi della struttura. 
 			
-			E' bene scegliere attentamente quale pattern utilizzare poiché esso influenzerà notevolmente le fasi di progettazione e soprattutto di realizzazione. 
+			\`E bene scegliere attentamente quale pattern utilizzare poiché esso influenzerà notevolmente le fasi di progettazione e soprattutto di realizzazione. 
 			
-			Il \textbf{MVC - Model View Controller} è un pattern architetturale specializzato nella progettazione e strutturazione modulare di applicazioni software interattive.
-			E' stato ideato da \textit{Trygve Reenskaug} (sviluppatore Smalltalk presso lo Xerox Palo Alto Reserch Center) nel 1979.
+			Il \textbf{MVC - Model View Controller} \citep{MVC-Slide} è un pattern architetturale specializzato nella progettazione e strutturazione modulare di applicazioni software interattive.
+			\`E stato ideato da \textit{Trygve Reenskaug} (sviluppatore Smalltalk presso lo Xerox Palo Alto Reserch Center) nel 1979.
 			
 			Ecco le parti di cui è composto: 
 			\begin{itemize}
@@ -104,7 +103,7 @@
 
 				\item \textbf{Controller}: logica di controllo che gestisce il modello dei dati. L'interazione da parte dell'utente è permessa grazie agli eventi e ai comandi generati dal Controller, che andranno a modificare il model.
 			
-				\item \textbf{View}: rappresentazione grafica e interattiva del model. Esso definisce le modalità di presentazione dei dati dello stato dell'applicazione. \'E una rappresentazione anche interattiva dato che consente proprio l'interazione con l'utente. 
+				\item \textbf{View}: rappresentazione grafica e interattiva del model. Esso definisce le modalità di presentazione dei dati dello stato dell'applicazione. \`E una rappresentazione anche interattiva dato che consente proprio l'interazione con l'utente. 
 				Riceve delle notifiche dal Model se avvengono dei cambiamenti e poi successivamente aggiorna la visualizzazione. 
 			\end{itemize}
 			
@@ -117,7 +116,7 @@
 			Inizializzazione dell'applicazione: 
 			\begin{enumerate}
 				\item Viene creato il model.
-				\item Viene creato il view il quale richiama il metodo getIstance() del model
+				\item Viene creato il view il quale richiama il metodo getIstance() del model.
 				\item Viene creato il controller il quale chiama il metodo getIstance() del Model e della View. 
 				\item Il view si registra come listener (o observer) del model per ricevere notifiche di aggiornamento dal model (observable).
 				\item Il controller si registra come listener ( o observer) del view per ricevere dal view (observable) gli eventi generati dall'utente.
@@ -136,8 +135,12 @@
 			
 			Nel paradigma MVC l'interazione tra componenti è basata su meccanismi di propagazione e gestione di eventi 
 			
-			L'interazione tra il view e il controller in java avviene in base al meccanismo di propagazione e gestione eventi Swing/AWT, i componenti controller sono EventListener (es MouseListener) associati ai componenti grafici view (es JButton). 
-			Diversamente avviene invece l'interazione tra model e view: il tutto viene gestito tramite la filosofia Observer-Observable, implementato appositamente tramite la gestione di variabili con metodi get e set, i quali effetuano dei controlli ed attivano dei meccanismi di feedback per le notifiche degli eventi.
+			L'interazione tra il view e il controller in Java avviene in base al meccanismo di propagazione e gestione eventi Swing/AWT, i componenti controller sono EventListener (es MouseListener) associati ai componenti grafici view (es JButton). 
+			Diversamente avviene invece l'interazione tra model e view: il tutto viene gestito tramite la filosofia Observer-Observable, implementato  tramite la gestione di variabili con metodi \verb|get| e \verb|set|, i quali effettuano dei controlli e attivano dei meccanismi di feedback, comunicazione tra le due classi attraverso la chiamata di metodi, si gestiscono gli eventi.
+			
+			Esempio del funzionamento del bottone \textit{Connect}. Quando l'utente clicca il pulsante connect si attiva l'evento associato. Questo viene raccolto dalla classe \verb|CredentialJPanelController| che a sua volta procede a verificare le credenziali chiamando il metodo \textit{isCredentialValidGitHub()} messo a disposizione dell'interfaccia \verb|IModel|. Una volta sincerate le credenziali si passa alla connessione vera e propria, sempre messa a disposizione dal'interfaccia \verb|IModel| tramite il metodo \textit{autenticateToGitHub()}. Se le credenziali non dovessero andare bene verrebbe chiamato il metodo \textit{disconnectGitHub()} che si occuperebbe di notificare l'impossibilità di connettersi.
+			
+			
 
 	\section{MOSS}\label{def:MOSS}	
 		\textbf{MOSS} è un sistema automatico per determinare la similarità dei sorgenti di programmi~\citep{AikenMOSS}. 

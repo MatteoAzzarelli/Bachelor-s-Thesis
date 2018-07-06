@@ -91,4 +91,10 @@
   url    = {http://github-api.kohsuke.org/},
 }
 
+@Misc{MVC-Slide,
+  author = {Alessandro Russo, Massimo Mecella},
+  title  = {Esercitazioni di PROGETTAZIONE DEL SOFTWARE},
+  url    = {http://www.dis.uniroma1.it/~mecella/didattica/2013/EsercitazioniProgettazioneSoftware/E08/Slide_MVC_StrutturaApplicazioni.pdf},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

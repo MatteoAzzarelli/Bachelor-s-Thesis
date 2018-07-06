@@ -22,12 +22,6 @@ Paul Clough.
   current tools and technologies, 2000.
 \newblock URL \url{https://ir.shef.ac.uk/cloughie/papers/plagiarism2000.pdf}.
 
-\bibitem[e~Massimo~Mecella()]{MVC-Slide}
-Alessandro~Russo e~Massimo~Mecella.
-\newblock Esercitazioni di progettazione del software.
-\newblock URL
-  \url{http://www.dis.uniroma1.it/~mecella/didattica/2013/EsercitazioniProgettazioneSoftware/E08/Slide_MVC_StrutturaApplicazioni.pdf}.
-
 \bibitem[Faidhi and Robinson(1987)]{Faidhi1987}
 J.~A.~W. Faidhi and S.~K. Robinson.
 \newblock An empirical approach for detecting program similarity and plagiarism
@@ -55,6 +49,12 @@ Alan Parker and James O.~Hamblen.
 \newblock Computer algorithms for plagiarism detection.
 \newblock \emph{Education, IEEE Transactions on}, 32:\penalty0 94--99, June
   1989.
+
+\bibitem[Russo and Mecella()]{MVC-Slide}
+Alessandro Russo and Massimo Mecella.
+\newblock Esercitazioni di progettazione del software.
+\newblock URL
+  \url{http://www.dis.uniroma1.it/~mecella/didattica/2013/EsercitazioniProgettazioneSoftware/E08/Slide_MVC_StrutturaApplicazioni.pdf}.
 
 \bibitem[Whale(1990)]{Whale1990}
 G.~Whale.
