@@ -1,0 +1,104 @@
+\documentclass{beamer}
+\usepackage[english,italian]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}	%caratteri accentati
+
+
+\usetheme{Padova}
+
+\title{\vspace{-0cm}Implementazione di un tool per il supporto alla valutazione automatica di progetti su GitHub}
+\subtitle{\vspace{-0cm}Corso di Laurea Triennale in Informatica\\{\large Tesi di Laurea}}
+\author{\vspace{-0.5cm}\centering{\hspace{-2.3cm}\textbf{Laureando}:\hspace{2.7cm}\textbf{Relatore}:\\Matteo Azzarelli\hspace{2cm}Prof. Francesco Santini}}
+\date{\vspace{2.5cm}\color{black}{\footnotesize{ANNO ACCADEMICO 2017/2018}}}
+
+
+
+\begin{document}
+
+	\maketitle
+
+	\begin{frame}{Outline}
+		\tableofcontents
+	\end{frame}
+
+	\section{Introduzione}
+	
+	\begin{frame}{Introduzione}
+		Perché abbiamo sviluppato questa applicazione?
+		\pause
+		\begin{enumerate}[<+->]
+			\item Dissuadere gli studenti dal plagio.
+			\item Scaricare i progetti assegnati su GitHub Classroom.
+			\item Gestione di centinaia di progetti per svariati appelli all'anno.
+		\end{enumerate}
+	\end{frame}
+
+	\section{GitHub}
+	
+	\begin{frame}{GitHub}
+		Cosa è \textbf{GitHub}?
+		
+		\vspace{0.5cm}
+		\textbf{GitHub} è un servizio di hosting per il controllo delle versioni. 
+		
+		\vspace{0.5cm}
+		Il controllo delle versioni consente di tenere traccia delle modifiche apportate al codice sorgente del software.
+		\pause
+		
+		\begin{block}{}
+			Offre contenuti gratuiti per gli studenti \textbf{GitHub student Developer Pack}.
+		\end{block}
+		\begin{block}{GitHub Classroom}
+			Consente agli insegnanti di assegnare compiti agli studenti, facendoli approcciare a GitHub.
+		\end{block}
+	\end{frame}
+
+	
+	\begin{frame}{Git}
+		contenuto...
+	\end{frame}
+	
+	\section{Lavori Correlati}
+	
+	\begin{frame}{Lavori correlati}
+		contenuto...
+	\end{frame}
+	
+	\section{Studio ed Implementazione}
+	
+	\begin{frame}{Studio ed Implementazione}
+		contenuto...
+	\end{frame}
+	
+	\section{Conclusioni}
+
+%	\begin{frame}{Conclusioni}
+%		\begin{block}{Normal block}
+%			Fusce luctus venenatis felis quis semper
+%		\end{block}
+%
+%		\begin{alertblock}{Alert block}
+%			$$ E = (x_1 \vee \neg x_2 \vee \neg x_3) \wedge (x_1 \vee x_2 \vee x_4) $$
+%		\end{alertblock}
+
+%		\begin{exampleblock}{Example block}
+%			Proin tincidunt, neque at tincidunt mollis
+%		\end{exampleblock}
+%	\end{frame}
+
+	
+	\begin{frame}{Conclusioni}
+		L'applicazione è stata testata sul campo riportando risultati positivi.
+		
+		\vspace{0.5cm}
+		\textbf{Futuri ampliamenti}:
+		\begin{itemize}
+			\item Download dei risultati di MOSS (MOSS li elimina dopo 14 giorni).
+			\item Analisi statica dei progetti (es. Valgrind), per fornire un aiuto al docente ccon una pre-valutazione del progetto.
+			\item Ottenere il nome e il cognome degli studenti dal file ReadMe delle repositories e costruire dinamicamente un gestionale degli strumenti.
+		\end{itemize}
+	\end{frame}
+
+\end{document}

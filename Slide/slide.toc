@@ -1,0 +1,7 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\beamer@sectionintoc {1}{Introduzione}{3}{0}{1}
+\beamer@sectionintoc {2}{GitHub}{7}{0}{2}
+\beamer@sectionintoc {3}{Lavori Correlati}{10}{0}{3}
+\beamer@sectionintoc {4}{Studio ed Implementazione}{11}{0}{4}
+\beamer@sectionintoc {5}{Conclusioni}{12}{0}{5}
