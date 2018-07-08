@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  7 JUL 2018 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  8 JUL 2018 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -832,94 +832,436 @@ Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
 )
-(./beamerthemePadova.sty (c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+(c:/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen191
+\captionmargin@=\dimen192
+\captionwidth=\dimen193
+\caption@tempdima=\dimen194
+\caption@indent=\dimen195
+\caption@parindent=\dimen196
+\caption@hangindent=\dimen197
+)
+\c@ContinuedFloat=\count160
+Package caption Info: beamer document class.
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+\c@subfigure=\count161
+\c@subtable=\count162
+)
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2018/03/22 version 4.13 text color boxes
+
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box53
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen198
+\pgf@nodesepend=\dimen199
+)
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (c:/texlive/2018/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks45
+\verbatim@line=\toks46
+\verbatim@in@stream=\read2
+)
+(c:/texlive/2018/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(c:/texlive/2018/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box54
+\tcb@upperbox=\box55
+\tcb@lowerbox=\box56
+\tcb@phantombox=\box57
+\c@tcbbreakpart=\count163
+\c@tcblayer=\count164
+\tcolorbox@number=\count165
+\tcb@temp=\box58
+\tcb@temp=\box59
+\tcb@temp=\box60
+\tcb@temp=\box61
+\tcb@out=\write5
+\tcb@record@out=\write6
+
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '4.13'
+\c@tcbrastercolumn=\count166
+\c@tcbrasterrow=\count167
+\c@tcbraster=\count168
+) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.13'
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen256
+\pgffor@skip=\dimen257
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count169
+\pgfplotmarksize=\dimen258
+)
+\tikz@lastx=\dimen259
+\tikz@lasty=\dimen260
+\tikz@lastxsaved=\dimen261
+\tikz@lastysaved=\dimen262
+\tikzleveldistance=\dimen263
+\tikzsiblingdistance=\dimen264
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count170
+\tikznumberofchildren=\count171
+\tikznumberofcurrentchild=\count172
+\tikz@fig@count=\count173
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count174
+\pgfmatrixcurrentcolumn=\count175
+\pgf@matrix@numberofcolumns=\count176
+)
+\tikz@expandcount=\count177
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+\tcb@waterbox=\box66
+
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.13'
+)) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.13'
+\tcb@testbox=\box67
+\tcb@totalupperbox=\box68
+\tcb@totallowerbox=\box69
+) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.13'
+) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.13'
+) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.13'
+\tcbfitdim=\dimen265
+\tcb@lowerfitdim=\dimen266
+\tcb@upperfitdim=\dimen267
+\tcb@cur@hbadness=\count178
+) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.13'
+(c:/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018-06-01 L3 programming layer (loader) 
+
+(c:/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2018-06-01 L3 programming layer (code)
+\c_max_int=\count179
+\l_tmpa_int=\count180
+\l_tmpb_int=\count181
+\g_tmpa_int=\count182
+\g_tmpb_int=\count183
+\g__kernel_prg_map_int=\count184
+\c_log_iow=\count185
+\l_iow_line_count_int=\count186
+\l__iow_line_target_int=\count187
+\l__iow_one_indent_int=\count188
+\l__iow_indent_int=\count189
+\c_zero_dim=\dimen268
+\c_max_dim=\dimen269
+\l_tmpa_dim=\dimen270
+\l_tmpb_dim=\dimen271
+\g_tmpa_dim=\dimen272
+\g_tmpb_dim=\dimen273
+\c_zero_skip=\skip57
+\c_max_skip=\skip58
+\l_tmpa_skip=\skip59
+\l_tmpb_skip=\skip60
+\g_tmpa_skip=\skip61
+\g_tmpb_skip=\skip62
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count190
+\l__intarray_loop_int=\count191
+\c__intarray_sp_dim=\dimen274
+\g__intarray_font_int=\count192
+\c__fp_leading_shift_int=\count193
+\c__fp_middle_shift_int=\count194
+\c__fp_trailing_shift_int=\count195
+\c__fp_big_leading_shift_int=\count196
+\c__fp_big_middle_shift_int=\count197
+\c__fp_big_trailing_shift_int=\count198
+\c__fp_Bigg_leading_shift_int=\count199
+\c__fp_Bigg_middle_shift_int=\count266
+\c__fp_Bigg_trailing_shift_int=\count267
+\c__kernel_randint_max_int=\count268
+\g__fp_array_int=\count269
+\l__fp_array_loop_int=\count270
+\l__sort_length_int=\count271
+\l__sort_min_int=\count272
+\l__sort_top_int=\count273
+\l__sort_max_int=\count274
+\l__sort_true_max_int=\count275
+\l__sort_block_int=\count276
+\l__sort_begin_int=\count277
+\l__sort_end_int=\count278
+\l__sort_A_int=\count279
+\l__sort_B_int=\count280
+\l__sort_C_int=\count281
+\l__tl_analysis_normal_int=\count282
+\l__tl_analysis_index_int=\count283
+\l__tl_analysis_nesting_int=\count284
+\l__tl_analysis_type_int=\count285
+\l__regex_internal_a_int=\count286
+\l__regex_internal_b_int=\count287
+\l__regex_internal_c_int=\count288
+\l__regex_balance_int=\count289
+\l__regex_group_level_int=\count290
+\l__regex_mode_int=\count291
+\c__regex_cs_in_class_mode_int=\count292
+\c__regex_cs_mode_int=\count293
+\l__regex_catcodes_int=\count294
+\l__regex_default_catcodes_int=\count295
+\c__regex_catcode_D_int=\count296
+\c__regex_catcode_S_int=\count297
+\c__regex_catcode_L_int=\count298
+\c__regex_catcode_O_int=\count299
+\c__regex_catcode_A_int=\count300
+\c__regex_all_catcodes_int=\count301
+\l__regex_show_lines_int=\count302
+\l__regex_min_state_int=\count303
+\l__regex_max_state_int=\count304
+\l__regex_left_state_int=\count305
+\l__regex_right_state_int=\count306
+\l__regex_capturing_group_int=\count307
+\l__regex_min_pos_int=\count308
+\l__regex_max_pos_int=\count309
+\l__regex_curr_pos_int=\count310
+\l__regex_start_pos_int=\count311
+\l__regex_success_pos_int=\count312
+\l__regex_curr_char_int=\count313
+\l__regex_curr_catcode_int=\count314
+\l__regex_last_char_int=\count315
+\l__regex_case_changed_char_int=\count316
+\l__regex_curr_state_int=\count317
+\l__regex_step_int=\count318
+\l__regex_min_active_int=\count319
+\l__regex_max_active_int=\count320
+\l__regex_replacement_csnames_int=\count321
+\l__regex_match_count_int=\count322
+\l__regex_min_submatch_int=\count323
+\l__regex_submatch_int=\count324
+\l__regex_zeroth_submatch_int=\count325
+\g__regex_trace_regex_int=\count326
+\c_empty_box=\box70
+\l_tmpa_box=\box71
+\l_tmpb_box=\box72
+\g_tmpa_box=\box73
+\g_tmpb_box=\box74
+\l__box_top_dim=\dimen275
+\l__box_bottom_dim=\dimen276
+\l__box_left_dim=\dimen277
+\l__box_right_dim=\dimen278
+\l__box_top_new_dim=\dimen279
+\l__box_bottom_new_dim=\dimen280
+\l__box_left_new_dim=\dimen281
+\l__box_right_new_dim=\dimen282
+\l__box_internal_box=\box75
+\l__coffin_internal_box=\box76
+\l__coffin_internal_dim=\dimen283
+\l__coffin_offset_x_dim=\dimen284
+\l__coffin_offset_y_dim=\dimen285
+\l__coffin_x_dim=\dimen286
+\l__coffin_y_dim=\dimen287
+\l__coffin_x_prime_dim=\dimen288
+\l__coffin_y_prime_dim=\dimen289
+\c_empty_coffin=\box77
+\l__coffin_aligned_coffin=\box78
+\l__coffin_aligned_internal_coffin=\box79
+\l_tmpa_coffin=\box80
+\l_tmpb_coffin=\box81
+\l__coffin_display_coffin=\box82
+\l__coffin_display_coord_coffin=\box83
+\l__coffin_display_pole_coffin=\box84
+\l__coffin_display_offset_dim=\dimen290
+\l__coffin_display_x_dim=\dimen291
+\l__coffin_display_y_dim=\dimen292
+\g__file_internal_ior=\read3
+\l__coffin_bounding_shift_dim=\dimen293
+\l__coffin_left_corner_dim=\dimen294
+\l__coffin_right_corner_dim=\dimen295
+\l__coffin_bottom_corner_dim=\dimen296
+\l__coffin_top_corner_dim=\dimen297
+\l__coffin_scaled_total_height_dim=\dimen298
+\l__coffin_scaled_width_dim=\dimen299
+\l__seq_internal_a_int=\count327
+\l__seq_internal_b_int=\count328
+)
+(c:/texlive/2018/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2018-06-01 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count329
+))
+Package: xparse 2018-05-12 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count330
+\g__xparse_grabber_int=\count331
+\l__xparse_m_args_int=\count332
+\l__xparse_mandatory_args_int=\count333
+\l__xparse_v_nesting_int=\count334
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tcboxverb with sig. ' O{} v ' on line 128.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tcbsidebyside with sig. ' +O{} +m +m ' on line 280.
+.................................................
+)
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.13'
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
+Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
+
+(c:/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count335
+\lst@gtempboxa=\box85
+\lst@token=\toks49
+\lst@length=\count336
+\lst@currlwidth=\dimen300
+\lst@column=\count337
+\lst@pos=\count338
+\lst@lostspace=\dimen301
+\lst@width=\dimen302
+\lst@newlines=\count339
+\lst@lineno=\count340
+\lst@maxwidth=\dimen303
+
+(c:/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count341
+\lst@skipnumbers=\count342
+\lst@framebox=\box86
+)
+(c:/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+))
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '4.13'
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.13'
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.13'
+(c:/texlive/2018/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 69.
+))
+\c@tcblisting=\count343
+)))
+(c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '4.13'
+) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '4.13'
+) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '4.13'
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.te
+x
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
+))) (c:/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '4.13'
+)) (./beamerthemePadova.sty
+(c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (c:/texlive/2018/texmf-dist/tex/latex/beamer/beamerinnerthemerectangles.sty)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/beamer/beamerinnerthemerectangles.sty)
 (./beamerouterthemePadova.sty) (./beamercolorthemePadova.sty)
 (./beamerfontthemePadova.sty))
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 13.
+(hyperref)                removing `\new@ifnextchar' on input line 31.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 13.
+(hyperref)                removing `\\' on input line 31.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@centercr' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rightskip' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@flushglue' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leftskip' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@flushglue' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\parindent' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\parfillskip' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@skip' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 18.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 18.
+(hyperref)                removing `\new@ifnextchar' on input line 36.
 
 (./slide.aux)
 \openout1 = `slide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 36.
  (c:/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    ... okay on input line 36.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -957,17 +1299,17 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count160
-\scratchdimen=\dimen191
-\scratchbox=\box53
-\nofMPsegments=\count161
-\nofMParguments=\count162
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count163
-\MPscratchDim=\dimen192
-\MPnumerator=\count164
-\makeMPintoPDFobject=\count165
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count344
+\scratchdimen=\dimen304
+\scratchbox=\box87
+\nofMPsegments=\count345
+\nofMParguments=\count346
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count347
+\MPscratchDim=\dimen305
+\MPnumerator=\count348
+\makeMPintoPDFobject=\count349
+\everyMPtoPDFconversion=\toks51
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -986,8 +1328,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 18.
+\AtBeginShipoutBox=\box88
+Package hyperref Info: Link coloring OFF on input line 36.
 
 (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -995,73 +1337,73 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count166
+\c@section@level=\count350
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
 
 (./slide.out) (./slide.out)
-\@outlinefile=\write5
-\openout5 = `slide.out'.
+\@outlinefile=\write7
+\openout7 = `slide.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 18.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 36.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 18.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 18.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 18.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 18.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 18.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 18.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 18.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 18.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 18.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 18.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 18.
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 18.
+(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 18.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 18.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 18.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 18.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 36.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 36.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 18
+(Font)              `pureletters' in the math version `normal' on input line 36
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 18
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 36
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 18.
+(Font)              `pureletters' in the math version `bold' on input line 36.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 1
-8.
+(Font)                  T1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 3
+6.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 18.
+ut line 36.
 
 (c:/texlive/2018/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
 glish.dict
@@ -1087,8 +1429,12 @@ Dictionary: translator-numbers-dictionary, Language: English
 English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \it@ocap on input line 18.
-LaTeX Info: Redefining \it@ccap on input line 18.
+LaTeX Info: Redefining \it@ocap on input line 36.
+LaTeX Info: Redefining \it@ccap on input line 36.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count351
  (./slide.nav) [1
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/bg.pdf
@@ -1116,45 +1462,177 @@ LaTeX Info: Redefining \it@ccap on input line 18.
 
 ] [12
 
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
+
+] [19
+
+ <./images/PlagirismLevels.png
+
+pdfTeX warning: pdflatex.exe (file ./images/PlagirismLevels.png): large interla
+ced PNG might cause out of memory (use non-interlaced PNG to fix this)
+>] [20
+
 ]
-\tf@nav=\write6
-\openout6 = `slide.nav'.
+LaTeX Font Info:    Try loading font information for U+msa on input line 156.
+ (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 156.
 
-\tf@toc=\write7
-\openout7 = `slide.toc'.
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 156.
 
-\tf@snm=\write8
-\openout8 = `slide.snm'.
+(c:/texlive/2018/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
+[21
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+] [22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+ <./images/Implementazione/MVCInterfaces.png>] [29
+
+ <./images/Implementazione/GitHubClasses.png
+
+pdfTeX warning: pdflatex.exe (file ./images/Implementazione/GitHubClasses.png):
+ large interlaced PNG might cause out of memory (use non-interlaced PNG to fix 
+this)
+>] [30
+
+ <./images/Implementazione/InterfacciaGrafica.png>] [31
+
+ <./images/Implementazione/MVC/MVCClass.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 206.
+
+
+(c:/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [32
+
+] [33
+
+] [34
+
+] [35
+
+]
+[36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+]
+Overfull \hbox (7.25333pt too wide) in paragraph at lines 262--262
+ [] 
+ []
+
+
+Overfull \hbox (7.25333pt too wide) in paragraph at lines 262--262
+ [] 
+ []
+
+
+Overfull \hbox (7.25333pt too wide) in paragraph at lines 262--262
+ [][] 
+ []
+
+
+Overfull \vbox (2.7323pt too high) detected at line 262
+ []
+
+[41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+] [46
+
+] [47
+
+] [48
+
+ <./images/MOSS/MOSSResults.jpg>]
+[49
+
+ <./images/MOSS/MOSSResultMatch.jpg>] [50
+
+]
+\tf@nav=\write8
+\openout8 = `slide.nav'.
+
+\tf@toc=\write9
+\openout9 = `slide.toc'.
+
+\tf@snm=\write10
+\openout10 = `slide.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 335.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 335.
  (./slide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 335.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 335.
 Package rerunfilecheck Info: File `slide.out' has not changed.
 (rerunfilecheck)             Checksum: 185484EECEE25ED9A59793FABF915B5E;245.
  ) 
 Here is how much of TeX's memory you used:
- 18208 strings out of 492646
- 337325 string characters out of 6133325
- 426172 words of memory out of 5000000
- 21641 multiletter control sequences out of 15000+600000
- 12710 words of font info for 27 fonts, out of 8000000 for 9000
+ 37348 strings out of 492646
+ 754358 string characters out of 6133325
+ 844912 words of memory out of 5000000
+ 40497 multiletter control sequences out of 15000+600000
+ 553429 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,12n,55p,807b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,12n,103p,807b,831s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texl
-ive/2018/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2018/t
-exmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2018/texmf-dist/
-fonts/type1/public/cm-super/sfss1000.pfb><c:/texlive/2018/texmf-dist/fonts/type
-1/public/cm-super/sfss1095.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/c
-m-super/sfss1200.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sf
-ss1440.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb
-><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfss2074.pfb><c:/texli
-ve/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on slide.pdf (12 pages, 322329 bytes).
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/
+texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb><c:/texlive/2018/texmf-dist
+/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2018/texmf-dist/fonts/typ
+e1/public/cm-super/sfss0900.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/
+cm-super/sfss1000.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/s
+fss1095.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfss1200.pf
+b><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb><c:/texl
+ive/2018/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb><c:/texlive/2018/t
+exmf-dist/fonts/type1/public/cm-super/sfss2074.pfb><c:/texlive/2018/texmf-dist/
+fonts/type1/public/cm-super/sfsx1095.pfb><c:/texlive/2018/texmf-dist/fonts/type
+1/public/cm-super/sftt1095.pfb>
+Output written on slide.pdf (50 pages, 2742483 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 321 compressed objects within 4 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

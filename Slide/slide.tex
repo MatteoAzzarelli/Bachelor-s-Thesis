@@ -5,12 +5,30 @@
 \usepackage{textcomp}
 \usepackage[utf8]{inputenc}	%caratteri accentati
 
+\newcommand\tab[1][1cm]{\hspace*{#1}}	% define new command tab
+
+\usepackage[font=scriptsize]{subcaption}
+\usepackage[most]{tcolorbox}
+
+%------------------------------------------------
+%		IMAGE DEFINITIONS
+%------------------------------------------------
+\usepackage{pgf,tikz}
+\usepackage{graphicx}
+
+\pgfdeclareimage[height=5cm]{PlagiarismLevels}{./images/PlagirismLevels}
+\pgfdeclareimage[height=5cm]{UMLMVC}{./images/Implementazione/MVCInterfaces}
+\pgfdeclareimage[height=7cm]{GitHubClasses}{./images/Implementazione/GitHubClasses}
+\pgfdeclareimage[height=7cm]{InterfacciaGrafica}{./images/Implementazione/InterfacciaGrafica}
+\pgfdeclareimage[height=4cm]{MVCClass}{./images/Implementazione/MVC/MVCClass}
+\pgfdeclareimage[width=10cm]{MOSSResults}{./images/MOSS/MOSSResults}
+\pgfdeclareimage[width=10cm]{MOSSResultMatch}{./images/MOSS/MOSSResultMatch}
 
 \usetheme{Padova}
 
-\title{\vspace{-0cm}Implementazione di un tool per il supporto alla valutazione automatica di progetti su GitHub}
+\title{Implementazione di un tool per il supporto alla valutazione automatica di progetti su GitHub}
 \subtitle{\vspace{-0cm}Corso di Laurea Triennale in Informatica\\{\large Tesi di Laurea}}
-\author{\vspace{-0.5cm}\centering{\hspace{-2.3cm}\textbf{Laureando}:\hspace{2.7cm}\textbf{Relatore}:\\Matteo Azzarelli\hspace{2cm}Prof. Francesco Santini}}
+\author{\vspace{-0.5cm}\textbf{Laureando}:\\Matteo Azzarelli}
 \date{\vspace{2.5cm}\color{black}{\footnotesize{ANNO ACCADEMICO 2017/2018}}}
 
 
@@ -47,31 +65,244 @@
 		Il controllo delle versioni consente di tenere traccia delle modifiche apportate al codice sorgente del software.
 		\pause
 		
-		\begin{block}{}
+		\begin{alertblock}{}
 			Offre contenuti gratuiti per gli studenti \textbf{GitHub student Developer Pack}.
-		\end{block}
-		\begin{block}{GitHub Classroom}
+		\end{alertblock}
+		\begin{alertblock}{GitHub Classroom}
 			Consente agli insegnanti di assegnare compiti agli studenti, facendoli approcciare a GitHub.
+		\end{alertblock}
+	\end{frame}
+	
+
+	\begin{frame}{Git}
+		GitHub è basato sul software \textbf{Git}, il quale permette di:
+		\begin{itemize}[<+->]
+			\item Tenere traccia dei cambiamenti dei file.
+			\item Coordinare il lavoro di più persone sullo stesso insieme di file.
+			\item Mantenere l'integrità dei files.
+			\item Gestire flussi di lavori non lineari.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Git: Comandi}
+		\begin{block}{Inizializzazione repository}
+			\tab git init
+		\end{block}
+		\pause
+		\begin{block}{Clonare repository}
+			\tab git clone <url>
+		\end{block}
+		\pause
+		\begin{block}{Rendere effettive le modifiche}
+			\tab git commit -m 'Commento'
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Git: Comandi}
+		\begin{block}{Prendere dati da remoto}
+			\tab git fetch <remote>
+		\end{block}
+		\pause
+		\begin{block}{Condividere le modifiche}
+			\tab git push <remote> <branch>
+		\end{block}
+		\pause
+		\begin{block}{Recupero dati dal Server di origine}
+			\tab git pull
 		\end{block}
 	\end{frame}
 
-	
-	\begin{frame}{Git}
-		contenuto...
-	\end{frame}
-	
 	\section{Lavori Correlati}
 	
-	\begin{frame}{Lavori correlati}
-		contenuto...
+	\begin{frame}{Plagio}
+		\begin{alertblock}{Definizione}
+			Un programma che è stato prodotto da un altro e riportato con un numero esiguo di trasformazioni di routine.
+			
+			\hspace{4cm}\textit{1976. Alan Parker e James O. Hamblen.}
+		\end{alertblock}
+		
+		\vspace{-0.5cm}
+		\begin{center}
+			\pgfuseimage{PlagiarismLevels}
+		\end{center}
 	\end{frame}
-	
+
+	\begin{frame}{Lavori correlati}
+		Alcuni dei più famosi software di \textit{plagiarism detection}:
+		\begin{itemize}
+			\item[SIM] Software Similarity Tester
+			\item[Siff] Inizialmente confrontava  i file di testo. Nelle versioni più recenti hanno utilizzato le fingerprint.
+			\item[Plague] Implementazione dei suggerimenti di Whale. 
+			\item[YAP] Yet Another Plague. Lavora sempre con i token.
+			\item[JPlag] Servizio Online con un'interfaccia grafica molto funzionale. Simile a MOSS.
+		\end{itemize}
+	\end{frame}
+
 	\section{Studio ed Implementazione}
 	
 	\begin{frame}{Studio ed Implementazione}
-		contenuto...
+		Caratteristiche dell'applicazione:
+		\begin{itemize}[<+->]
+			\item Sviluppata in \textbf{Java}:
+				\begin{itemize}[<+->]
+					\item \`E cross-platform.
+					\item Documentazione completa.
+					\item Esistenza di librerie per il nostro scopo.
+				\end{itemize}
+			\item Utilizzo del pattern Model View Controller.
+			\item Download delle repositories di GitHub.
+			\item Analisi dei progetti degli studenti tramite il servizio MOSS.
+		\end{itemize}
 	\end{frame}
 	
+	\begin{frame}{Studio ed Implementazione: MVC}
+		Diagramma UML della struttura del software:
+		\begin{center}
+			\pgfuseimage{UMLMVC}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{Studio ed Implementazione: GitHub}
+		Organizzazione delle ropositories:
+		\begin{center}
+			\pgfuseimage{GitHubClasses}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{Studio ed Implementazione: Interfaccia}
+		Uno sguardo all'interfaccia:
+		\begin{center}
+			\pgfuseimage{InterfacciaGrafica}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{MVC}
+		Il \textbf{Model View Controller} è uno dei pattern architetturali.
+		\begin{itemize}
+			\item \textbf{Model}: modello dei dati dell'applicazione.
+			\item \textbf{View}: rappresenta la grafica e interattiva del model.
+			\item \textbf{Controller}: logica di controllo che garantisce il modello dei dati.
+		\end{itemize}
+		\begin{center}
+			\pgfuseimage{MVCClass}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{MOSS}
+		MOSS (Measure Of Software Similarity) è un sistema automatico per determinare la similarità di programmi.
+		
+		\begin{itemize}
+			\item[Input] Accetta gruppi di documenti.
+			\item[Outpoot] Restituisce un'insieme di pagine HTML contenenti le coppie di documenti simili.
+		\end{itemize}
+		
+		\pause
+		Può analizzare molti linguaggi di programmazione, come ad esempio:
+		\begin{itemize}
+			\item \texttt{C, C++ e C\#}
+			\item \texttt{Java}
+			\item Il linguaggio naturale e molti altri.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{MOSS: Funzionamento}
+		Con poche fingerprint ottiene ottimi risultati. Ciò implica maggiore efficienza.
+		
+		Algoritmo:
+		\begin{enumerate}[<+->]
+			\item Costruisce una mappa delle fingerprint per tutti i documenti.
+			\item Per ogni documento vine effettuata una nuova fingerprint, ottenendo una lista di fingerprint per ciascun documento. Ora ogni documento \texttt{d} può contenere fingerprint di molti altri documenti \texttt{d1,d2,...} .
+			\item La lista delle fingerprint viene raggruppata per documento e poi vengono fatte le coppie di documenti \texttt{(d,d1), (d,d2)}.
+			Queste coppie vengono ordinate per numero di fingerprint uguali.
+			
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{MOSS: Fingerprint}
+		Generare le fingerprint:
+		\begin{itemize}[<+->]
+			\item Dividere un documento in k-grams, cioè una sottostringa di lunghezza k.
+			\item Utilizza una funzione hash per ogni k-gram e selezioniamo tra essi qualche seottoinsieme, che sarà la fingerprint.
+		\end{itemize}
+		\pause
+		\begin{alertblock}{Fingerprint}
+			L'insieme di \textbf{fingerprint} è un piccolo sottoinsieme dell'insieme di tutti i "k-grams hashes".
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}{MOSS: k-grams}
+		\begin{exampleblock}{Esempio k-gram}
+			\vspace{-0.7cm}
+			\begin{figure}
+				\subcaptionbox{un po di testo [The Crystals. Da do run run, 1963]}
+				{
+					\begin{tcolorbox}
+						A do run run run, a do run run
+					\end{tcolorbox}
+				}
+				\subcaptionbox{il testo senza alcune caratteristiche irrilevanti}
+				{
+					\begin{tcolorbox}
+						adorunrunrunadorunrun
+					\end{tcolorbox}
+				}
+				
+				\subcaptionbox{la sequenza di 5-grams derivata dal testo}
+				{
+					\begin{tcolorbox}
+						adoru dorun orunr runru unrun nrunr runru
+						
+						unrun nruna runad unado nador adoru dorun
+						
+						orunr runru unrun 
+					\end{tcolorbox}
+				}
+			\end{figure}
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{MOSS: Servizio}
+		MOSS mette a disposizione un webservice accessibile tramite vari script e librerie.
+		
+		Per il nostro progetto abbiamo utilizzato la libreria Java \textbf{MOJI} che consente l'accesso al servizio.
+		
+		\pause
+		Questa libreria permette di:
+		\begin{enumerate}[<+->]
+			\item Connettersi al server con il proprio numero utente.
+			\item Inviare la cartella contenente tutti i progetti degli studenti.
+			\item Inviare la cartella contenente il modello del progetto.
+			\item Ricevere il link per visualizzare la pagina HTML dei risultati.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{MOSS: Servizio}
+		\begin{block}{Struttura cartella dei progetti}
+		 	\begin{tcolorbox}
+				\texttt{\tab solution\_directory\\ 
+					\tab $\vert$- student1\\
+					\tab[1.5cm] $\vert$- main.c\\
+					\tab[1.5cm] $\vert$- ...\\
+					\tab $\vert$- student2\\
+					\tab[1.5cm] $\vert$- ...\\
+					\tab $\vert$\_ student3\\
+					\tab[1.5cm] $\vert$- ...
+				}
+			\end{tcolorbox}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{MOSS: Risultati}
+		\begin{center}
+			\pgfuseimage{MOSSResults}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{MOSS: Risultati}
+		\begin{center}
+			\pgfuseimage{MOSSResultMatch}
+		\end{center}
+	\end{frame}
 	\section{Conclusioni}
 
 %	\begin{frame}{Conclusioni}
