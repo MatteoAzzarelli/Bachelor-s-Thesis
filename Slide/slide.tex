@@ -12,6 +12,12 @@
 
 
 %------------------------------------------------
+%		Trasparenza liste
+%------------------------------------------------
+\setbeamercovered{transparent}
+
+
+%------------------------------------------------
 %		IMAGE DEFINITIONS
 %------------------------------------------------
 \usepackage{pgf,tikz}
@@ -19,8 +25,8 @@
 
 \pgfdeclareimage[height=5cm]{PlagiarismLevels}{./images/PlagirismLevels}
 \pgfdeclareimage[height=5cm]{UMLMVC}{./images/Implementazione/MVCInterfaces}
-\pgfdeclareimage[height=7cm]{GitHubClasses}{./images/Implementazione/GitHubClasses}
-\pgfdeclareimage[height=7cm]{InterfacciaGrafica}{./images/Implementazione/InterfacciaGrafica}
+\pgfdeclareimage[height=6.5cm]{GitHubClasses}{./images/Implementazione/GitHubClasses}
+\pgfdeclareimage[height=6.5cm]{InterfacciaGrafica}{./images/Implementazione/InterfacciaGrafica}
 \pgfdeclareimage[height=4cm]{MVCClass}{./images/Implementazione/MVC/MVCClass}
 \pgfdeclareimage[width=10cm]{MOSSResults}{./images/MOSS/MOSSResults}
 \pgfdeclareimage[width=10cm]{MOSSResultMatch}{./images/MOSS/MOSSResultMatch}
@@ -29,7 +35,8 @@
 
 \title{Implementazione di un tool per il supporto alla valutazione automatica di progetti su GitHub}
 \subtitle{\vspace{-0cm}Corso di Laurea Triennale in Informatica\\{\large Tesi di Laurea}}
-\author{\vspace{-0.5cm}\textbf{Laureando}:\\Matteo Azzarelli}
+\author{%\vspace{-0.5cm}\textbf{Laureando}:\\
+	Matteo Azzarelli}
 \date{\vspace{2.5cm}\color{black}{\footnotesize{ANNO ACCADEMICO 2017/2018}}}
 
 
@@ -66,9 +73,6 @@
 		Il controllo delle versioni consente di tenere traccia delle modifiche apportate al codice sorgente del software.
 		\pause
 		
-		\begin{alertblock}{}
-			Offre contenuti gratuiti per gli studenti \textbf{GitHub student Developer Pack}.
-		\end{alertblock}
 		\begin{alertblock}{GitHub Classroom}
 			Consente agli insegnanti di assegnare compiti agli studenti, facendoli approcciare a GitHub.
 		\end{alertblock}
@@ -85,33 +89,33 @@
 		\end{itemize}
 	\end{frame}
 	
-	\begin{frame}{Git: Comandi}
-		\begin{block}{Inizializzazione repository}
-			\tab git init
-		\end{block}
-		\pause
-		\begin{block}{Clonare repository}
-			\tab git clone <url>
-		\end{block}
-		\pause
-		\begin{block}{Rendere effettive le modifiche}
-			\tab git commit -m 'Commento'
-		\end{block}
-	\end{frame}
+%	\begin{frame}{Git: Comandi}
+%		\begin{block}{Inizializzazione repository}
+%			\tab git init
+%		\end{block}
+%		\pause
+%		\begin{block}{Clonare repository}
+%			\tab git clone <url>
+%		\end{block}
+%		\pause
+%		\begin{block}{Rendere effettive le modifiche}
+%			\tab git commit -m 'Commento'
+%		\end{block}
+%	\end{frame}
 	
-	\begin{frame}{Git: Comandi}
-		\begin{block}{Prendere dati da remoto}
-			\tab git fetch <remote>
-		\end{block}
-		\pause
-		\begin{block}{Condividere le modifiche}
-			\tab git push <remote> <branch>
-		\end{block}
-		\pause
-		\begin{block}{Recupero dati dal Server di origine}
-			\tab git pull
-		\end{block}
-	\end{frame}
+%	\begin{frame}{Git: Comandi}
+%		\begin{block}{Prendere dati da remoto}
+%			\tab git fetch <remote>
+%		\end{block}
+%		\pause
+%		\begin{block}{Condividere le modifiche}
+%			\tab git push <remote> <branch>
+%		\end{block}
+%		\pause
+%		\begin{block}{Recupero dati dal Server di origine}
+%			\tab git pull
+%		\end{block}
+%	\end{frame}
 
 	\section{Lavori Correlati}
 	
@@ -128,16 +132,16 @@
 		\end{center}
 	\end{frame}
 
-	\begin{frame}{Lavori correlati}
-		Alcuni dei più famosi software di \textit{plagiarism detection}:
-		\begin{itemize}
-			\item[SIM] Software Similarity Tester
-			\item[Siff] Inizialmente confrontava  i file di testo. Nelle versioni più recenti hanno utilizzato le fingerprint.
-			\item[Plague] Implementazione dei suggerimenti di Whale. 
-			\item[YAP] Yet Another Plague. Lavora sempre con i token.
-			\item[JPlag] Servizio Online con un'interfaccia grafica molto funzionale. Simile a MOSS.
-		\end{itemize}
-	\end{frame}
+%	\begin{frame}{Lavori correlati}
+%		Alcuni dei più famosi software di \textit{plagiarism detection}:
+%		\begin{itemize}
+%			\item[SIM] Software Similarity Tester
+%			\item[Siff] Inizialmente confrontava  i file di testo. Nelle versioni più recenti hanno utilizzato le fingerprint.
+%			\item[Plague] Implementazione dei suggerimenti di Whale. 
+%			\item[YAP] Yet Another Plague. Lavora sempre con i token.
+%			\item[JPlag] Servizio Online con un'interfaccia grafica molto funzionale. Simile a MOSS.
+%		\end{itemize}
+%	\end{frame}
 
 	\section{Studio ed Implementazione}
 	
@@ -163,31 +167,33 @@
 		\end{center}
 	\end{frame}
 	
-	\begin{frame}{Studio ed Implementazione: GitHub}
-		Organizzazione delle ropositories:
-		\begin{center}
-			\pgfuseimage{GitHubClasses}
-		\end{center}
-	\end{frame}
+%	\begin{frame}{Studio ed Implementazione: GitHub}
+%		\vspace{-0.2cm}
+%		Organizzazione delle repositories:
+%		\begin{center}
+%			\pgfuseimage{GitHubClasses}
+%		\end{center}
+%	\end{frame}
 	
 	\begin{frame}{Studio ed Implementazione: Interfaccia}
+		\vspace{-0.2cm}
 		Uno sguardo all'interfaccia:
 		\begin{center}
 			\pgfuseimage{InterfacciaGrafica}
 		\end{center}
 	\end{frame}
 
-	\begin{frame}{MVC}
-		Il \textbf{Model View Controller} è uno dei pattern architetturali.
-		\begin{itemize}
-			\item \textbf{Model}: modello dei dati dell'applicazione.
-			\item \textbf{View}: rappresenta la grafica e interattiva del model.
-			\item \textbf{Controller}: logica di controllo che garantisce il modello dei dati.
-		\end{itemize}
-		\begin{center}
-			\pgfuseimage{MVCClass}
-		\end{center}
-	\end{frame}
+%	\begin{frame}{MVC}
+%		Il \textbf{Model View Controller} è uno dei pattern architetturali.
+%		\begin{itemize}
+%			\item \textbf{Model}: modello dei dati dell'applicazione.
+%			\item \textbf{View}: rappresenta la grafica e interattiva del model.
+%			\item \textbf{Controller}: logica di controllo che garantisce il modello dei dati.
+%		\end{itemize}
+%		\begin{center}
+%			\pgfuseimage{MVCClass}
+%		\end{center}
+%	\end{frame}
 	
 	\begin{frame}{MOSS}
 		MOSS (Measure Of Software Similarity) è un sistema automatico per determinare la similarità di programmi.
@@ -220,46 +226,36 @@
 	\end{frame}
 	
 	\begin{frame}{MOSS: Fingerprint}
-		Generare le fingerprint:
+		
+		{\footnotesize Generare le fingerprint:
 		\begin{itemize}[<+->]
-			\item Divide un documento in k-grams, cioè una sottostringa di lunghezza k.
-			\item Utilizza una funzione hash per ogni k-gram e selezioniamo tra essi qualche seottoinsieme, che sarà la fingerprint.
-		\end{itemize}
-		\pause
-		\begin{alertblock}{Fingerprint}
-			L'insieme di \textbf{fingerprint} è un piccolo sottoinsieme dell'insieme di tutti i "k-grams hashes".
-		\end{alertblock}
-	\end{frame}
-
-	\begin{frame}{MOSS: k-grams}
-		\begin{exampleblock}{Esempio k-gram}
-			\vspace{-0.7cm}
-			\begin{figure}
-				\subcaptionbox{un po di testo [The Crystals. Da do run run, 1963]}
-				{
-					\begin{tcolorbox}
-						A do run run run, a do run run
-					\end{tcolorbox}
-				}
-				\subcaptionbox{il testo senza alcune caratteristiche irrilevanti}
-				{
-					\begin{tcolorbox}
-						adorunrunrunadorunrun
-					\end{tcolorbox}
-				}
+			\item Divide un documento in k-grams, cioè in sottostringhe di lunghezza k
+			\begin{exampleblock}{{\footnotesize Esempio k-gram}}
+				\begin{tcolorbox}[size=small]
+					A do run run run, a do run run
+				\end{tcolorbox}
+				(a) un po di testo [The Crystals. Da do run run, 1963]
 				
-				\subcaptionbox{la sequenza di 5-grams derivata dal testo}
-				{
-					\begin{tcolorbox}
-						adoru dorun orunr runru unrun nrunr runru
-						
-						unrun nruna runad unado nador adoru dorun
-						
-						orunr runru unrun 
-					\end{tcolorbox}
-				}
-			\end{figure}
-		\end{exampleblock}
+				\pause
+				
+				\begin{tcolorbox}[size=small]
+					adorunrunrunadorunrun
+				\end{tcolorbox}
+				(b) il testo senza alcune caratteristiche irrilevanti
+				
+				\pause
+				\begin{tcolorbox}[size=small]
+					adoru dorun orunr runru unrun nrunr runru
+					
+					unrun nruna runad unado nador adoru dorun
+					
+					orunr runru unrun
+				\end{tcolorbox}
+				(c) la sequenza di 5-grams derivata dal testo
+			\end{exampleblock}
+			\item Utilizza una funzione hash per ogni k-gram e selezioniamo tra essi qualche sottoinsieme, che sarà la fingerprint.
+		\end{itemize}
+	}
 	\end{frame}
 
 	\begin{frame}{MOSS: Servizio}
