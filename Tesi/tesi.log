@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  6 JUL 2018 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.16)  9 JUL 2018 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1281,7 +1281,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 15.
 See the caption package documentation for explanation.
 
-[9 <./images/chapter02/PlagirismLevels.png>] [10] [11] [12]
+[9 <./images/chapter02/PlagiarismLevels.png>] [10] [11] [12]
 Underfull \hbox (badness 1168) in paragraph at lines 113--113
 [][][]\T1/cmr/m/n/9 iperonimia, ov-ve-ro quan-do un ter-mi-ne è in-clu-so nel s
 i-gni-fi-ca-to del-l'al-tro (es:
@@ -1428,7 +1428,7 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  34268 strings out of 492646
- 672124 string characters out of 6133325
+ 672126 string characters out of 6133325
  776023 words of memory out of 5000000
  37536 multiletter control sequences out of 15000+600000
  549876 words of font info for 59 fonts, out of 8000000 for 9000
