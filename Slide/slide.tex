@@ -25,7 +25,7 @@
 
 \pgfdeclareimage[height=5cm]{PlagiarismLevels}{./images/PlagirismLevels}
 \pgfdeclareimage[height=5cm]{UMLMVC}{./images/Implementazione/MVCInterfaces}
-\pgfdeclareimage[height=6.5cm]{GitHubClasses}{./images/Implementazione/GitHubClasses}
+\pgfdeclareimage[height=7cm]{GitHubClasses}{./images/Implementazione/GitHubClasses}
 \pgfdeclareimage[height=6.5cm]{InterfacciaGrafica}{./images/Implementazione/InterfacciaGrafica}
 \pgfdeclareimage[height=4cm]{MVCClass}{./images/Implementazione/MVC/MVCClass}
 \pgfdeclareimage[width=10cm]{MOSSResults}{./images/MOSS/MOSSResults}
@@ -57,7 +57,8 @@
 		\begin{enumerate}[<+->]
 			\item Dissuadere gli studenti dal plagio.
 			\item Scaricare i progetti assegnati su GitHub Classroom.
-			\item Gestione di centinaia di progetti per svariati appelli all'anno.
+			\item Gestione di centinaia di progetti per svariati appelli ed esercitazioni all'anno, fornendo inoltre un'analisi su eventuali similitudini.
+			
 		\end{enumerate}
 	\end{frame}
 
@@ -74,7 +75,7 @@
 		\pause
 		
 		\begin{alertblock}{GitHub Classroom}
-			Consente agli insegnanti di assegnare compiti agli studenti, facendoli approcciare a GitHub.
+			Consente ai docenti di assegnare compiti agli studenti, facendoli approcciare a GitHub.
 		\end{alertblock}
 	\end{frame}
 	
@@ -147,16 +148,16 @@
 	
 	\begin{frame}{Studio ed Implementazione}
 		Caratteristiche dell'applicazione:
-		\begin{itemize}[<+->]
-			\item Sviluppata in \textbf{Java}:
-				\begin{itemize}[<+->]
+		\begin{itemize}
+			\item<1-> Sviluppata in \textbf{Java}:
+				\begin{itemize}
 					\item \`E cross-platform.
 					\item Documentazione completa.
 					\item Esistenza di librerie per il nostro scopo.
 				\end{itemize}
-			\item Utilizzo del pattern Model View Controller.
-			\item Download delle repositories di GitHub.
-			\item Analisi dei progetti degli studenti tramite il servizio MOSS.
+			\item<2-> Utilizzo del pattern Model View Controller.
+			\item<3-> Download delle repositories di GitHub.
+			\item<4-> Analisi dei progetti degli studenti tramite il servizio MOSS.
 		\end{itemize}
 	\end{frame}
 	
@@ -167,13 +168,13 @@
 		\end{center}
 	\end{frame}
 	
-%	\begin{frame}{Studio ed Implementazione: GitHub}
-%		\vspace{-0.2cm}
-%		Organizzazione delle repositories:
-%		\begin{center}
-%			\pgfuseimage{GitHubClasses}
-%		\end{center}
-%	\end{frame}
+	\begin{frame}{Studio ed Implementazione: GitHub}
+		\vspace{-0.2cm}
+		Organizzazione delle repositories:
+		\begin{center}
+			\pgfuseimage{GitHubClasses}
+		\end{center}
+	\end{frame}
 	
 	\begin{frame}{Studio ed Implementazione: Interfaccia}
 		\vspace{-0.2cm}
@@ -230,19 +231,16 @@
 		{\footnotesize Generare le fingerprint:
 		\begin{itemize}[<+->]
 			\item Divide un documento in k-grams, cioè in sottostringhe di lunghezza k
-			\begin{exampleblock}{{\footnotesize Esempio k-gram}}
+			\begin{exampleblock}{\footnotesize Esempio k-gram}
 				\begin{tcolorbox}[size=small]
 					A do run run run, a do run run
 				\end{tcolorbox}
 				(a) un po di testo [The Crystals. Da do run run, 1963]
-				
 				\pause
-				
 				\begin{tcolorbox}[size=small]
 					adorunrunrunadorunrun
 				\end{tcolorbox}
 				(b) il testo senza alcune caratteristiche irrilevanti
-				
 				\pause
 				\begin{tcolorbox}[size=small]
 					adoru dorun orunr runru unrun nrunr runru
@@ -253,6 +251,7 @@
 				\end{tcolorbox}
 				(c) la sequenza di 5-grams derivata dal testo
 			\end{exampleblock}
+			\pause
 			\item Utilizza una funzione hash per ogni k-gram e selezioniamo tra essi qualche sottoinsieme, che sarà la fingerprint.
 		\end{itemize}
 	}
@@ -296,23 +295,29 @@
 	\end{frame}
 
 	\begin{frame}{MOSS: Risultati}
-		\begin{center}
+		\begin{figure}
 			\pgfuseimage{MOSSResultMatch}
-		\end{center}
+		\end{figure}
 	\end{frame}
 	\section{Conclusioni}
 
 	
 	\begin{frame}{Conclusioni}
+		Obiettivi raggiunti:
+		\begin{enumerate}
+			\item Scaricare i progetti assegnati su GitHub Classroom.
+			\item Gestire ed analizzare centinaia di progetti, analizzandoli tramite MOSS.
+		\end{enumerate}
 		L'applicazione è stata testata sul campo riportando risultati positivi.
+		\pause
 		
 		\vspace{0.5cm}
-		\textbf{Futuri ampliamenti}:
+		{\small \textbf{Futuri ampliamenti}:
 		\begin{itemize}
 			\item Download dei risultati di MOSS (MOSS li elimina dopo 14 giorni).
 			\item Analisi statica dei progetti (es. Valgrind), per fornire un aiuto al docente con una pre-valutazione del progetto.
 			\item Ottenere il nome e il cognome degli studenti dal file ReadMe delle repositories e costruire dinamicamente un gestionale degli strumenti.
-		\end{itemize}
+		\end{itemize}}
 	\end{frame}
 
 	\begin{frame}{Conclusioni}

@@ -4,4 +4,4 @@
 \beamer@sectionintoc {2}{GitHub}{7}{0}{2}
 \beamer@sectionintoc {3}{Lavori Correlati}{13}{0}{3}
 \beamer@sectionintoc {4}{Studio ed Implementazione}{14}{0}{4}
-\beamer@sectionintoc {5}{Conclusioni}{41}{0}{5}
+\beamer@sectionintoc {5}{Conclusioni}{40}{0}{5}
