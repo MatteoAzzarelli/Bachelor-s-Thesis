@@ -20,6 +20,8 @@
 %------------------------------------------------
 %		IMAGE DEFINITIONS
 %------------------------------------------------
+\usepackage{changepage}
+
 \usepackage{pgf,tikz}
 \usepackage{graphicx}
 
@@ -28,8 +30,8 @@
 \pgfdeclareimage[height=7cm]{GitHubClasses}{./images/Implementazione/GitHubClasses}
 \pgfdeclareimage[height=6.5cm]{InterfacciaGrafica}{./images/Implementazione/InterfacciaGrafica}
 \pgfdeclareimage[height=4cm]{MVCClass}{./images/Implementazione/MVC/MVCClass}
-\pgfdeclareimage[width=10cm]{MOSSResults}{./images/MOSS/MOSSResults}
-\pgfdeclareimage[width=10cm]{MOSSResultMatch}{./images/MOSS/MOSSResultMatch}
+\pgfdeclareimage[width=12.8cm]{MOSSResults}{./images/MOSS/MOSSResults}
+\pgfdeclareimage[width=12.8cm]{MOSSResultMatch}{./images/MOSS/MOSSResultMatch}
 \pgfdeclareimage[width=10cm]{fingerprint01}{./images/MOSS/Fingerprint/fingerprint01}
 \pgfdeclareimage[width=10cm]{fingerprint02}{./images/MOSS/Fingerprint/fingerprint02}
 \pgfdeclareimage[width=8cm]{fingerprint03}{./images/MOSS/Fingerprint/fingerprint03}
@@ -231,7 +233,7 @@
 		\vspace{-0.8cm}\begin{center}
 			\pgfuseimage{fingerprint02}
 		\end{center}
-		\vspace{-0.5cm}{\footnotesize \textbf{2)} Per ogni documento vine effettuata una nuova fingerprint, ottenendo una lista di fingerprint per ciascun documento. Ora ogni documento \texttt{d} può contenere fingerprint di molti altri documenti \texttt{d1,d2,...}.}
+		\vspace{-0.5cm}{\footnotesize \textbf{2)} Per ogni documento viene effettuata una nuova fingerprint, ottenendo una lista di fingerprint per ciascun documento. Ora ogni documento \texttt{d} può contenere fingerprint di molti altri documenti \texttt{d1,d2,...}.}
 	\end{frame}
 	
 	\begin{frame}{MOSS: Funzionamento}
@@ -305,16 +307,19 @@
 	\end{frame}
 	
 	\begin{frame}{MOSS: Risultati}
-		\begin{center}
+		\begin{adjustwidth}{-1cm}{-1cm}
 			\pgfuseimage{MOSSResults}
-		\end{center}
+		\end{adjustwidth}
 	\end{frame}
 
+
+
 	\begin{frame}{MOSS: Risultati}
-		\begin{figure}
+		\begin{adjustwidth}{-1cm}{-1cm}
 			\pgfuseimage{MOSSResultMatch}
-		\end{figure}
+		\end{adjustwidth}
 	\end{frame}
+
 	\section{Conclusioni}
 
 	
